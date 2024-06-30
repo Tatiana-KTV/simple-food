@@ -1,0 +1,88 @@
+body {
+  background-color: $silver-100;
+  @extend %rubik-400;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+  padding: 60px 0;
+}
+
+.header,
+.navigation,
+.menu__list,
+.user-nav__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.active {
+  color: $orange-900;
+}
+
+.menu {
+  &__link {
+    font-size: 18px;
+  }
+
+  &__list {
+    margin-right: 60px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 45px;
+  }
+}
+
+.user-nav {
+  &__list {
+    margin-right: 10px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 35px;
+  }
+
+  &__btn {
+    position: relative;
+  }
+
+  &__btn::before {
+    content: '';
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__btn--search::before {
+    background-image: url('../images/icons/search.svg');
+    top: -14px;
+    left: 0px;
+  }
+
+  &__btn--cart::before {
+    background-image: url('../images/icons/cart.svg');
+    top: -14px;
+    left: -10px;
+  }
+
+  &__num {
+    width: 11px;
+    position: absolute;
+    top: -18px;
+    left: 2px;
+    font-size: 10px;
+    color: #fff;
+    background-color: #ff6838;
+    border-radius: 50%;
+  }
+}

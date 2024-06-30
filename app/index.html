@@ -1,22 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.min.css">
-  <title>Document</title>
-</head>
-<body>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <title>SimpleFood</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <a class="menu__logo" href="#">
+          <img
+            class="menu__logo-img"
+            src="images/logo.svg"
+            alt="логотип компании"
+          />
+        </a>
+        <div class="navigation">
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link active" href="#">Главная</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Блюда</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
 
+          <ul class="user-nav__list">
+            <li class="user-nav__item">
+              <button class="user-nav__btn user-nav__btn--search">
+                <span class="sr-only">поиск</span>
+              </button>
+            </li>
+            <li class="user-nav__item">
+              <button class="user-nav__btn user-nav__btn--cart">
+                <span class="sr-only">корзина</span>
+                <span class="user-nav__num">4</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </header>
 
+      <main class="main"></main>
 
-
-
-
-
-
-
-  
-  <script src="js/main.min.js"></script>
-</body>
+      <footer class="footer"></footer>
+    </div>
+    <script src="js/main.min.js"></script>
+  </body>
 </html>
