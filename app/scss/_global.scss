@@ -7,10 +7,15 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  border: 1px solid green;
 }
 
 .header {
   padding: 60px 0;
+
+  &__logo-img {
+    width: 200px;
+  }
 }
 
 .header,
@@ -20,10 +25,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.active {
-  color: $orange-900;
 }
 
 .menu {
@@ -84,5 +85,219 @@ body {
     color: #fff;
     background-color: #ff6838;
     border-radius: 50%;
+  }
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__img {
+    max-width: 100%;
+    width: 560px;
+  }
+
+  &__content {
+    margin-right: 40px;
+    max-width: 450px;
+  }
+
+  &__title {
+    @extend %rubik-500;
+    font-size: 66px;
+    font-weight: 500;
+    line-height: 1.3;
+    text-transform: uppercase;
+    color: $dark-blue900;
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    color: $orange-900;
+  }
+
+  &__txt {
+    font-size: 20px;
+    line-height: 1.5;
+    color: $dark;
+    margin-bottom: 20px;
+  }
+
+  &__order {
+    display: flex;
+  }
+
+  &__btn {
+    margin-right: 34px;
+  }
+}
+
+.btn-active {
+  font-size: 18px;
+  line-height: 1.3;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #fff;
+  background-color: $orange-900;
+  border-radius: 6px;
+  padding: 12px 32px;
+}
+
+.btn-more {
+  font-size: 20px;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-align: center;
+  color: $dark-blue900;
+  padding: 8px 0;
+  border: 1px solid blue;
+}
+
+.section {
+  padding-top: 120px;
+  border: 1px solid red;
+}
+
+.section.hero {
+  padding-top: 0;
+}
+
+.title {
+  @extend %rubik-500;
+  font-size: 36px;
+  line-height: 1.3;
+  color: $dark-blue900;
+  text-align: center;
+}
+
+.popular {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .title {
+    margin-bottom: 60px;
+  }
+
+  &__filter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  &__list-category {
+    padding: 13px 32px 13px 80px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px #ececec;
+  }
+
+  &__list-category:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__item-category {
+    position: relative;
+    font-size: 20px;
+    line-height: 1.3;
+    color: $dark-blue900;
+  }
+
+  &__item-category::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -54px;
+    width: 44px;
+    height: 44px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__item-category--burger::before {
+    background-image: url('../images/icons/icon-category-burger.svg');
+  }
+
+  &__item-category--pizza::before {
+    background-image: url('../images/icons/icon-category-pizza.svg');
+  }
+
+  &__item-category--sandvich::before {
+    background-image: url('../images/icons/icon-category-sandvich.svg');
+  }
+
+  &__item-category--asia::before {
+    background-image: url('../images/icons/icon-category-asia.svg');
+  }
+
+  &__item-category--set::before {
+    background-image: url('../images/icons/icon-category-set.svg');
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: -30px;
+    margin-bottom: 30px;
+  }
+
+  &__item-content {
+    margin-right: 30px;
+    margin-bottom: 30px;
+    padding: 20px 15px;
+    max-width: 209px;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px $silver-200;
+    background: #fff;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__item-img {
+    max-width: 140px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  &__item-title {
+    color: $dark;
+    margin-bottom: 10px;
+    max-height: 36px;
+    height: 100%;
+  }
+
+  &__item-price {
+    @extend %rubik-500;
+    line-height: 1.4;
+    color: $dark-blue900;
+    margin-bottom: 10px;
+  }
+
+  &__item-btn {
+    font-size: 14px;
+    line-height: 1.3;
+    color: #fff;
+    background-color: $orange-900;
+    border-radius: 6px;
+    padding: 7px 16px;
+  }
+
+  &__btn {
+    font-size: 20px;
+    line-height: 1.5;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: $dark-blue900;
   }
 }
