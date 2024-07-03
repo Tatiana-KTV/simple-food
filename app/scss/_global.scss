@@ -74,38 +74,13 @@ body {
   &__item:not(:last-child) {
     margin-right: 35px;
   }
-
   &__btn {
     position: relative;
   }
-
-  &__btn::before {
-    content: '';
-    position: absolute;
-    width: 19px;
-    height: 19px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
-  &__btn--search::before {
-    background-image: url('../images/icons/search.svg');
-    top: -14px;
-    left: 0px;
-  }
-
-  &__btn--cart::before {
-    background-image: url('../images/icons/cart.svg');
-    top: -14px;
-    left: -10px;
-  }
-
   &__num {
     width: 11px;
     position: absolute;
-    top: -18px;
-    left: 2px;
+    left: 20px;
     font-size: 10px;
     color: $white;
     background-color: #ff6838;
@@ -346,8 +321,10 @@ body {
 
 .footer-top {
   display: flex;
-  justify-content: space-between;
   padding-bottom: 65px;
+}
+.footer-content:not(:last-child) {
+  margin-right: 70px;
 }
 
 .footer-content {
@@ -454,7 +431,7 @@ body {
   &__detail {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     padding: 5px 0;
   }
 
