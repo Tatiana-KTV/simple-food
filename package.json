@@ -16,6 +16,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^5.1.0",
+    "gulp-svg-sprite": "^2.0.3",
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.7.1",
     "mixitup": "^3.3.1",
