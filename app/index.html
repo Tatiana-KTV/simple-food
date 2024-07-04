@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="images/favicon/favicon-32x32.png">
+      href="images/favicon/favicon-32x32.png"
+    />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="images/favicon/site.webmanifest">
-    <link
-      rel="mask-icon"
-      href="images/favicon/safari-pinned-tab.svg">
-    <link rel="shortcut icon" href="images/favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#da532c" >
+      href="images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" />
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c" />
     <meta
       name="msapplication-config"
-      content="images/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff" >
+      content="images/favicon/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="images/favicon/apple-touch-icon.png">
-    <link rel="stylesheet" href="css/style.min.css">
+      href="images/favicon/apple-touch-icon.png"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
     <title>SimpleFood</title>
   </head>
   <body>
@@ -164,18 +166,10 @@
                   Самый быстрый сервис доставки еды в вашем городе. Не уложимся
                   в срок - доставка за наш счёт
                 </p>
-                <ul class="hero__order">
-                  <li class="hero__info">
-                    <button class="hero__btn btn-active" type="button">
-                      Заказать
-                    </button>
-                  </li>
-                  <li class="hero__info">
-                    <button class="hero__btn btn-more animation" type="button">
-                      Подробнее
-                    </button>
-                  </li>
-                </ul>
+                <div class="hero__order">
+                  <a class="hero__btn btn-active">Заказать</a>
+                  <a class="hero__btn btn-more animation"> Подробнее </a>
+                </div>
               </div>
               <div class="hero__picture">
                 <img
@@ -188,13 +182,13 @@
           </div>
           <div class="container">
             <section class="section popular">
-              <h2 class="title">Популярные категории</h2>
+              <h2 class="title popular__title">Популярные категории</h2>
 
               <ul class="popular__filter">
                 <li class="popular__list-category">
                   <button
                     class="popular__item-category popularbtn-style"
-                    data-filter=".category-burger"
+                    data-filter="all"
                     type="button"
                   >
                     <svg
@@ -304,7 +298,7 @@
                 <li class="popular__list-category">
                   <button
                     class="popular__item-category popularbtn-style"
-                    data-filter=".category-sandwiches"
+                    data-filter=".category-burger"
                     type="button"
                   >
                     <svg
@@ -434,7 +428,9 @@
                       </defs>
                     </svg>
 
-                    <span class="popular__item-description">Азиатская кухня</span>
+                    <span class="popular__item-description"
+                      >Азиатская кухня</span
+                    >
                   </button>
                 </li>
 
@@ -645,7 +641,7 @@
             <section class="section features">
               <img class="features-img" src="images/food-delivery.png" alt="" />
               <div class="features-content">
-                <h2 class="title">
+                <h2 class="title features-content__title">
                   Оставайтесь дома, <br />
                   а мы позаботимся о еде
                 </h2>
@@ -694,7 +690,7 @@
           </div>
           <div class="container">
             <section class="section restorant">
-              <h2 class="title">Лучшие рестораны</h2>
+              <h2 class="title restorant__title">Лучшие рестораны</h2>
               <ul class="restorant__list">
                 <li class="restorant__item">
                   <img
@@ -702,7 +698,7 @@
                     src="images/restorant/1.png"
                     alt="ресторан Blaze Pizza"
                   />
-                  <h3 class="restorant__title">Blaze Pizza</h3>
+                  <h3 class="restorant__subtitle">Blaze Pizza</h3>
                   <div class="restorant__details">
                     <div class="restorant__work-detail">
                       <svg class="restorant__timer">
@@ -710,7 +706,7 @@
                       </svg>
                       <span class="restorant__hours">11:00 - 22:00</span>
                     </div>
-                    <button class="restorant__link"  type="button">
+                    <button class="restorant__link" type="button">
                       <svg class="restorant__arrow-right" fill="#000">
                         <use xlink:href="images/sprite.svg#cart"></use>
                       </svg>
@@ -724,7 +720,7 @@
                     src="images/restorant/2.png"
                     alt="ресторан Pizza Runcho"
                   />
-                  <h3 class="restorant__title">Pizza Runcho</h3>
+                  <h3 class="restorant__subtitle">Pizza Runcho</h3>
                   <div class="restorant__details">
                     <div class="restorant__work-detail">
                       <svg class="restorant__timer">
@@ -742,7 +738,7 @@
                     src="images/restorant/3.png"
                     alt="ресторан Pizza Hut"
                   />
-                  <h3 class="restorant__title">Pizza Hut</h3>
+                  <h3 class="restorant__subtitle">Pizza Hut</h3>
                   <div class="restorant__details">
                     <div class="restorant__work-detail">
                       <svg class="restorant__timer">
@@ -759,7 +755,7 @@
                     src="images/restorant/4.png"
                     alt="ресторан McDonald`s"
                   />
-                  <h3 class="restorant__title">McDonald`s</h3>
+                  <h3 class="restorant__subtitle">McDonald`s</h3>
                   <div class="restorant__details">
                     <div class="restorant__work-detail">
                       <svg class="restorant__timer">
@@ -776,7 +772,7 @@
                     src="images/restorant/5.png"
                     alt="ресторан KFC"
                   />
-                  <h3 class="restorant__title">KFC</h3>
+                  <h3 class="restorant__subtitle">KFC</h3>
                   <div class="restorant__details">
                     <div class="restorant__work-detail">
                       <svg class="restorant__timer">
@@ -793,7 +789,7 @@
                     src="images/restorant/6.png"
                     alt="ресторан Star Burgers"
                   />
-                  <h3 class="restorant__title">Star Burgers</h3>
+                  <h3 class="restorant__subtitle">Star Burgers</h3>
                   <div class="restorant__details">
                     <div class="restorant__work-detail">
                       <svg class="restorant__timer">
@@ -916,7 +912,7 @@
           <div class="container">
             <section class="section application">
               <div class="application-content">
-                <h2 class="title">Скачайте мобильное приложение</h2>
+                <h2 class="title application__title">Скачайте мобильное приложение</h2>
                 <p class="application-content__txt">
                   Рестораны, которые вы любите - в ваших руках. Устанавливайте
                   приложение и заказывайте еду в любом удобном месте.
