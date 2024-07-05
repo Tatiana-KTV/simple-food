@@ -1,5 +1,13 @@
 $(function(){
-
+  $('.slider').slick({
+    dots: true,
+    focusOnSelect: true,
+    arrows: true,
+    appendArrows: '.slider-navigation',
+    prevArrow: '<div class="slider-arrow"><</div>',
+    appendDots: '.slider-navigation__dots',
+    nextArrow: '<div class="slider-arrow">></div>',
+  });
 });
 
 
