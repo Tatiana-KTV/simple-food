@@ -43,6 +43,8 @@
                   <img
                     class="header__logo-img"
                     src="images/logo.png"
+                    width="200"
+                    height="39"
                     alt="логотип компании"
                   />
                 </a>
@@ -246,7 +248,7 @@
                       />
                       <h3 class="product-card__item-title">Бифбургер</h3>
                       <span class="product-card__item-info">
-                        <span lass="product-card__item-price">190</span>
+                        <span сlass="product-card__item-price">190</span>
                         <span class="product-card__item-currency">грн.</span>
                       </span>
                       <button
@@ -292,7 +294,7 @@
                       />
                       <h3 class="product-card__item-title">Черный гамбургер</h3>
                       <span class="product-card__item-info">
-                        <spanc class="product-card__item-price">199</spanc>
+                        <span class="product-card__item-price">199</span>
                         <span class="product-card__item-currency">грн.</span>
                       </span>
                       <button
@@ -349,7 +351,7 @@
                       </button>
                     </article>
                   </li>
-                  <li class="popular__item-content mix category-sandwiches">
+                  <li class="popular__item-content mix category-asia">
                     <article class="product-card">
                       <img
                         class="product-card__item-img"
@@ -360,7 +362,7 @@
                       />
                       <h3 class="product-card__item-title">Бифбургер</h3>
                       <span class="product-card__item-info">
-                        <span lass="product-card__item-price">190</span>
+                        <span сlass="product-card__item-price">190</span>
                         <span class="product-card__item-currency">грн.</span>
                       </span>
                       <button
@@ -371,7 +373,7 @@
                       </button>
                     </article>
                   </li>
-                  <li class="popular__item-content mix category-set">
+                  <li class="popular__item-content mix category-pizza">
                     <article class="product-card">
                       <img
                         class="product-card__item-img"
@@ -406,7 +408,7 @@
                       />
                       <h3 class="product-card__item-title">Черный гамбургер</h3>
                       <span class="product-card__item-info">
-                        <spanc class="product-card__item-price">199</spanc>
+                        <span class="product-card__item-price">199</span>
                         <span class="product-card__item-currency">грн.</span>
                       </span>
                       <button
@@ -417,7 +419,7 @@
                       </button>
                     </article>
                   </li>
-                  <li class="popular__item-content mix category-pizza">
+                  <li class="popular__item-content mix category-set">
                     <article class="product-card">
                       <img
                         class="product-card__item-img"
@@ -534,7 +536,7 @@
                           >
                         </div>
                         <a
-                          class="restorant-card__link"
+                          class="restorant-card__link animation-btn"
                           href="#"
                           target="_blank"
                           rel="noopener noreferrer"
@@ -573,7 +575,7 @@
                           >
                         </div>
                         <a
-                          class="restorant-card__link"
+                          class="restorant-card__link animation-btn"
                           href="#"
                           target="_blank"
                           rel="noopener noreferrer"
@@ -612,7 +614,7 @@
                           >
                         </div>
                         <a
-                          class="restorant-card__link"
+                          class="restorant-card__link animation-btn"
                           href="#"
                           target="_blank"
                           rel="noopener noreferrer"
@@ -650,7 +652,7 @@
                           >
                         </div>
                         <a
-                          class="restorant-card__link"
+                          class="restorant-card__link animation-btn"
                           href="#"
                           target="_blank"
                           rel="noopener noreferrer"
@@ -689,7 +691,7 @@
                             >
                           </div>
                           <a
-                            class="restorant-card__link"
+                            class="restorant-card__link animation-btn"
                             href="#"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -731,7 +733,7 @@
                           >
                         </div>
                         <a
-                          class="restorant-card__link"
+                          class="restorant-card__link animation-btn"
                           href="#"
                           target="_blank"
                           rel="noopener noreferrer"
@@ -859,16 +861,9 @@
                   </div>
                 </div>
               </div>
+
               <div class="slider-navigation">
-                <span class="slider-arrow">
-                  <svg class="slider-arrow__arrow-right" fill="#000">
-                            <use
-                              xlink:href="images/sprite.svg#slick-prev-arrow"
-                            ></use>
-                           </svg>
-                </span>
-                <span class="slider-navigation__dots"></span>
-                <!-- <span class="slider-arrow"></span> -->
+                <div class="slider-navigation__dots"></div>
               </div>
             </div>
           </section>
@@ -921,8 +916,14 @@
         <div class="container">
           <div class="footer-top d-flex">
             <div class="footer-content">
-              <a class="footer__logo logo" href="#body">
-                <img class="logo__img" src="images/logo.png" alt="логотип" />
+              <a class="footer-content__logo logo" href="#body">
+                <img
+                  class="logo__img"
+                  src="images/logo.png"
+                  alt="логотип"
+                  width="200"
+                  height="39"
+                />
               </a>
               <form
                 class="subscribe-form d-flex"
@@ -944,24 +945,14 @@
                   type="submit"
                   name="subscribe-btn"
                 >
-                  <svg
-                    class="subscribe-form__btn-icon"
-                    width="17"
-                    height="16"
-                    viewBox="0 0 17 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M10.318 14.3001C10.0587 14.3001 9.81927 14.1616 9.70234 13.9406L7.66076 10.0822C7.54864 9.87034 7.5679 9.61684 7.71028 9.42119L11.0058 5.20009L6.53816 8.31359C6.33112 8.44879 6.06285 8.46569 5.83861 8.36039L1.75613 6.43184C1.51125 6.31549 1.36199 6.07304 1.37712 5.81434C1.39156 5.55564 1.56835 5.32944 1.82561 5.24039L14.895 0.690388C15.1461 0.603938 15.4288 0.660488 15.6193 0.840538C15.8092 1.01929 15.8711 1.28709 15.7782 1.52499L10.9632 13.875C10.8683 14.1181 10.6296 14.2851 10.3558 14.2988C10.3434 14.2994 10.3304 14.3001 10.318 14.3001Z"
-                      fill="white"
-                    />
+                  <svg class="subscribe-form__btn-icon">
+                    <use xlink:href="images/sprite.svg#subscribe"></use>
                   </svg>
-                  <span>Подписаться</span>
+                  Подписаться
                 </button>
               </form>
             </div>
-            <div class="footer-content d-flex">
+            <div class="footer-content">
               <ul class="footer-content__menu">
                 <li class="footer-content__item">
                   <a
@@ -1111,45 +1102,54 @@
                     >
                   </li>
                 </ul>
+                <ul class="contacts__list social d-flex">
+                  <li class="social__icon">
+                    <a
+                      class="social__link"
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span class="sr-only"
+                        >ссылка, ведущая на facebook компании</span
+                      >
+                      <svg class="social__link--fb">
+                        <use xlink:href="images/sprite.svg#ic-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__icon">
+                    <a
+                      class="social__link"
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span class="sr-only"
+                        >ссылка, ведущая на twitter компании</span
+                      >
+                      <svg class="social__link--tw">
+                        <use xlink:href="images/sprite.svg#ic-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__icon">
+                    <a
+                      class="social__link"
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span class="sr-only"
+                        >ссылка, ведущая на instagram компании</span
+                      >
+                      <svg class="social__link--ig">
+                        <use xlink:href="images/sprite.svg#ic-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
               </address>
-              <ul class="social d-flex">
-                <li class="social__icon">
-                  <a
-                    class="social__link"
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <svg class="social__link--fb">
-                      <use xlink:href="images/sprite.svg#ic-facebook"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social__icon">
-                  <a
-                    class="social__link"
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <svg class="social__link--tw">
-                      <use xlink:href="images/sprite.svg#ic-twitter"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social__icon">
-                  <a
-                    class="social__link"
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <svg class="social__link--ig">
-                      <use xlink:href="images/sprite.svg#ic-instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
             </div>
           </div>
         </div>

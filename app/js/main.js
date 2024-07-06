@@ -3,17 +3,24 @@ $(function(){
     dots: true,
     focusOnSelect: true,
     arrows: true,
-    // appendArrows: '.slider-navigation',
-    // prevArrow: '<div class="slider-arrow"></div>',
     appendDots: '.slider-navigation__dots',
-    // nextArrow: '<div class="slider-arrow"></div>',
-
-
-  prevArrow: '<button type="button" class="slider__arrow slider__arrow--prev"><span class="lnr lnr-chevron-left"></span></button>',
-  nextArrow: '<button type="button" class="slider__arrow slider__arrow--next"><span class="lnr lnr-chevron-right"></span></button>',
-  appendArrows: '.arrows-wrap'
-
+    appendArrows: '.slider-navigation',
+    prevArrow:
+      '<button type="button" class="slider-navigation__arrow slider-navigation__arrow--prev"><svg class="slider-arrow__arrow-left" fill="#000"><use xlink:href="images/sprite.svg#slick-prev-arrow"></use></svg></button>',
+    nextArrow:
+      '<button type="button" class="slider-navigation__arrow slider-navigation__arrow--next"><svg class="slider-arrow__arrow-right" fill="#000"><use xlink:href="images/sprite.svg#slick-prev-arrow"></use></svg></button>',
   });
+
+
+
+
+
+
+
+
+
+
+
 
     $('.menu__link, .logo').on('click', function (event) {
       event.preventDefault();
