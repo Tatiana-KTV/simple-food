@@ -5,7 +5,6 @@
 @import "libs";
 @import "mixin";
 
-@import "media";
 
 .header {
   padding-top: 159px;
@@ -221,14 +220,6 @@
     color: $dark-blue900;
     transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
 
-          // .mixitup-control-active {
-          //   background-color: $orange-900;
-          //   color: $white;
-
-          //   .popular__ico {
-          //     fill: $white;
-          //   }
-          // }
 
     &:hover {
       color: $orange-900;
@@ -320,14 +311,14 @@
   }
 
 
-  // .mixitup-control-active {
-  //   background-color: $orange-900;
-  //   color: $white;
+  .mixitup-control-active {
+    background-color: $orange-900;
+    color: $white;
 
-  //   // &.popular__ico {
-  //   //   fill: $white;
-  //   // }
-  // }
+    .popular__ico {
+      fill: $white;
+    }
+  }
 }
 
 .product-card {
