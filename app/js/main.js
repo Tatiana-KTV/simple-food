@@ -3,24 +3,17 @@ $(function(){
     dots: true,
     focusOnSelect: true,
     arrows: true,
-    appendDots: '.slider-navigation__dots',
-    appendArrows: '.slider-navigation',
+    infinite: false,
+    // appendDots: '.slider-navigation__dots',
+    // appendDots: '.slider-navigation',
+    // appendArrows: '.slider-navigation',
+        appendDots: '.slider',
+    appendArrows: '.slider',
     prevArrow:
       '<button type="button" class="slider-navigation__arrow slider-navigation__arrow--prev"><svg class="slider-arrow__arrow-left" fill="#000"><use xlink:href="images/sprite.svg#slick-prev-arrow"></use></svg></button>',
     nextArrow:
       '<button type="button" class="slider-navigation__arrow slider-navigation__arrow--next"><svg class="slider-arrow__arrow-right" fill="#000"><use xlink:href="images/sprite.svg#slick-prev-arrow"></use></svg></button>',
   });
-
-
-
-
-
-
-
-
-
-
-
 
     $('.menu__link, .logo').on('click', function (event) {
       event.preventDefault();
@@ -29,7 +22,6 @@ $(function(){
       $('body,html').animate({ scrollTop: top }, 1500);
     });
 });
-
 
 const changeColor = document.querySelector('.menu');
 changeColor.addEventListener('mousedown', (e) => {
