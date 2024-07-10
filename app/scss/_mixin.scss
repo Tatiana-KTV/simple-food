@@ -13,3 +13,11 @@
     -webkit-box-orient: vertical;
   }
 }
+
+@mixin pseudo($content: '', $pos: absolute, $b-repeat: no-repeat, $b-position: center, $b-size: cover) {
+  content: $content;
+  position: $pos;
+  background-repeat: $b-repeat;
+  background-position: $b-position;
+  background-size: $b-size;
+}
