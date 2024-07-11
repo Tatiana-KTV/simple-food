@@ -23,10 +23,10 @@ $(function () {
 
 const changeColor = document.querySelector('.menu');
 changeColor.addEventListener('mousedown', (e) => {
-      const activeClass = e.target;
-      if (activeClass.tagName != 'A') return;
-      changeColor.querySelector('.active') ?.classList.remove('active');
-      activeClass.classList.add('active');
+  const activeClass = e.target;
+  if (activeClass.tagName != 'A') return;
+  changeColor.querySelector('.active') ?.classList.remove('active');
+  activeClass.classList.add('active');
 });
 
 $(document).scroll(function (e) {
@@ -34,5 +34,35 @@ $(document).scroll(function (e) {
     $('.header__top').addClass('header-fixed') :
     $('.header__top').removeClass('header-fixed');
 });
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  const burger = document.querySelector('.burger');
+  const mobileMenu = document.querySelector('.burger-menu'); 
+  const bodyLock = document.querySelector('body'); 
+  const burgerNew = document.querySelector('.burger-new');
+
+  burger.addEventListener('click', () => {
+    mobileMenu.classList.add('burger-menu--active');
+    if (mobileMenu.classList.contains('burger-menu--active')) {
+      burgerNew.classList.add('burger--active'); 
+      bodyLock.classList.add('lock'); 
+    } else { 
+      burgerNew.classList.remove('burger--active'); 
+      bodyLock.classList.remove('lock'); 
+    }
+  });
+  burgerNew.addEventListener('click', () => {
+    mobileMenu.classList.remove('burger-menu--active');
+    burgerNew.classList.remove('burger--active'); 
+    bodyLock.classList.remove('lock');
+  })
+
+});
+
+
+
 
 var mixer = mixitup('.popular-category__content');

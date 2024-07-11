@@ -18,6 +18,22 @@ body {
   overflow: hidden;
 }
 
+.lock {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
 .wrapper-content {
   min-height: calc(100vh - 315px);
 }
@@ -59,9 +75,11 @@ body {
   box-shadow: none;
   transition: color 0.3s, opacity 0.3s, text-shadow 0.3s, box-shadow 0.3s;
 
-  &:hover {
-    color: $orange-900;
-    text-decoration: none;
+  @media (any-hover: hover) {
+    &:hover {
+      color: $orange-900;
+      text-decoration: none;
+    }
   }
 
   &:focus {
@@ -83,11 +101,13 @@ body {
   background-color: $orange-900;
   transition: color 0.3s, background-color 0.3s, box-shadow 0.3s, border 0.3s;
 
-  &:hover {
-    color: $orange-900;
-    box-shadow: 0 0 0 2px rgba($orange-900, 0.7),
-      0 5px 12px 0 rgba($orange-900, 0.2);
-    background-color: rgba($white, 0.1);
+  @media (any-hover: hover) {
+    &:hover {
+      color: $orange-900;
+      box-shadow: 0 0 0 2px rgba($orange-900, 0.7),
+        0 5px 12px 0 rgba($orange-900, 0.2);
+      background-color: rgba($white, 0.1);
+    }
   }
 
   &:focus {
