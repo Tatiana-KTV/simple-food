@@ -60,4 +60,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+$(window).on('load resize', function(){
+  if ($(window).width() < 768) {
+    $('.restorant__list:not(.slick-initialized)').slick({
+      arrows:false,
+      dots: true,
+      infinite: true,
+      speed: 100,
+      slidesToShow: 1,
+    });
+  } else {
+    $('.restorant__list.slick-initialized').slick('unslick');
+  }
+});
+
 var mixer = mixitup('.popular-category__content');
