@@ -35,8 +35,6 @@ $(document).scroll(function (e) {
     $('.header__top').removeClass('header-fixed');
 });
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
 
   const burger = document.querySelector('.burger');
@@ -61,8 +59,5 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
 });
-
-
-
 
 var mixer = mixitup('.popular-category__content');
