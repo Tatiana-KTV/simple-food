@@ -11,6 +11,11 @@ $blue: #00aaff;
 $red: #ff2222;
 $black: #000;
 
+$breakpoints: ("phone": 560px,
+  "tablet": 768px,
+  "tablet-2": 992px,
+  "desktop": 1230px);
+
 %rubik-300 {
   font-family: 'Rubik', sans-serif;
   font-weight: 300;
