@@ -32,7 +32,8 @@
                   <a class="menu__link active animation" href="index.html">Главная</a>
                 </li>
                 <li class="menu__item">
-                  <a class="menu__link animation" href="catalog.html" target="_blank" rel="noopener noreferrer">Блюда</a>
+                  <a class="menu__link animation" href="catalog.html" target="_blank"
+                    rel="noopener noreferrer">Блюда</a>
                 </li>
                 <li class="menu__item">
                   <a class="menu__link animation" href="#contacts">Контакты</a>
@@ -162,27 +163,18 @@
         </div>
       </header>
       <main class="main">
-        <section class="section hero">
-          <div class="container hero d-flex">
-            <div class="hero__content">
-              <h1 class="sr-only">Сервис самой быстрой доставки продуктов из ресторанов в вашем городе</h1>
-              <h2 class="hero__title">
-                Доставка <br>
-                <span class="hero__subtitle"> за 15 минут </span>
-              </h2>
-              <p class="hero__txt">
-                Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт
-              </p>
-              <div class="hero__order d-flex">
-                <a class="hero__btn animation-btn" href="#">Заказать</a>
-                <a class="hero__btn btn-more animation" href="#"> Подробнее </a>
-              </div>
-            </div>
-            <div class="hero__picture" style="background-image: url('images/scooter-guy.png')">
-              <span class="sr-only">картинка доставщика на скутере</span>
-            </div>
+        <div class="wrappwer-wide">
+          <div class="container">
+            <ul class="breadcrumbs d-flex">
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__elem" href="index.html">Главная</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <span class="breadcrumbs__elem">Каталог товаров</span>
+              </li>
+            </ul>
           </div>
-        </section>
+        </div>
 
         <section class="section popular-category">
           <div class="container">
@@ -286,18 +278,6 @@
                     <button class="product-card__item-btn animation-btn" type="button">В корзину</button>
                   </article>
                 </li>
-                <li class="popular-category__item-content mix category-set">
-                  <article class="product-card">
-                    <img class="product-card__item-img" src="images/popular/5.png" width="140" height="140"
-                      alt="фото Чикен бургер">
-                    <h3 class="product-card__item-title">Чикен бургер</h3>
-                    <span class="product-card__item-info">
-                      <span class="product-card__item-price">180</span>
-                      <span class="product-card__item-currency">грн.</span>
-                    </span>
-                    <button class="product-card__item-btn animation-btn" type="button">В корзину</button>
-                  </article>
-                </li>
                 <li class="popular-category__item-content mix category-burger">
                   <article class="product-card">
                     <img class="product-card__item-img" src="images/popular/1.png" width="140" height="140"
@@ -346,16 +326,56 @@
                     <button class="product-card__item-btn animation-btn" type="button">В корзину</button>
                   </article>
                 </li>
-                <li class="popular-category__item-content mix category-set">
+                <li class="popular-category__item-content mix category-burger">
                   <article class="product-card">
-                    <img class="product-card__item-img" src="images/popular/5.png" width="140" height="140"
-                      alt="фото Чикен бургер">
-                    <h3 class="product-card__item-title">Чикен бургер</h3>
+                    <img class="product-card__item-img" src="images/popular/1.png" width="140" height="140"
+                      alt="фото Чизбургер с листьями салата">
+                    <h3 class="product-card__item-title">Чизбургер с листьями салата</h3>
                     <span class="product-card__item-info">
-                      <span class="product-card__item-price">180</span>
+                      <span class="product-card__item-price">160</span>
                       <span class="product-card__item-currency">грн.</span>
                     </span>
-                    <button class="product-card__item-btn animation-btn" type="button">В корзину</button>
+                    <button class="product-card__item-btn animation-btn" type="button">В
+                      корзину</button>
+                  </article>
+                </li>
+                <li class="popular-category__item-content mix category-asia">
+                  <article class="product-card">
+                    <img class="product-card__item-img" src="images/popular/2.png" width="140" height="140"
+                      alt="фото Бифбургер">
+                    <h3 class="product-card__item-title">Бифбургер</h3>
+                    <span class="product-card__item-info">
+                      <span class="product-card__item-price">190</span>
+                      <span class="product-card__item-currency">грн.</span>
+                    </span>
+                    <button class="product-card__item-btn animation-btn" type="button">В
+                      корзину</button>
+                  </article>
+                </li>
+                <li class="popular-category__item-content mix category-pizza">
+                  <article class="product-card">
+                    <img class="product-card__item-img" width="140" height="140" src="images/popular/3.png"
+                      alt="фото Королевский чизбургер">
+                    <h3 class="product-card__item-title">Королевский чизбургер</h3>
+                    <span class="product-card__item-info">
+                      <span class="product-card__item-price">260</span>
+                      <span class="product-card__item-currency">грн.</span>
+                    </span>
+                    <button class="product-card__item-btn animation-btn" type="button">В
+                      корзину</button>
+                  </article>
+                </li>
+                <li class="popular-category__item-content mix category-burger">
+                  <article class="product-card">
+                    <img class="product-card__item-img" src="images/popular/4.png" width="140" height="140"
+                      alt="фото Черный гамбургер">
+                    <h3 class="product-card__item-title">Черный гамбургер</h3>
+                    <span class="product-card__item-info">
+                      <span class="product-card__item-price">199</span>
+                      <span class="product-card__item-currency">грн.</span>
+                    </span>
+                    <button class="product-card__item-btn animation-btn" type="button">В
+                      корзину</button>
                   </article>
                 </li>
               </ul>
@@ -365,44 +385,6 @@
           </div>
         </section>
 
-        <section class="section features container">
-          <div class="features__cont d-flex">
-            <div class="features__img" style="background-image: url('images/food-delivery.png')">
-              <span class="sr-only"> картинка доставщика, передающего коробку клиенту </span>
-            </div>
-            <div class="features__content features-content">
-              <h2 class="title features-content__title">
-                Оставайтесь дома, <br>
-                а мы позаботимся о еде
-              </h2>
-              <p class="features-content__txt">
-                У нас есть вкусная еда и мы готовы доставить её к вам домой! Воспользуйтесь нашей доставкой прямо
-                сейчас и получите скиидку!
-              </p>
-              <ul class="features-content__list">
-                <li class="features-content__list-item">
-                  <svg class="features-content__img features-content__img--timer">
-                    <use xlink:href="images/sprite.svg#icon-timer"></use>
-                  </svg>
-                  <span class="features-content__list-txt">Быстрая доставка за 15 минут</span>
-                </li>
-                <li class="features-content__list-item">
-                  <svg class="features-content__img features-content__img--delivery">
-                    <use xlink:href="images/sprite.svg#icon-delivery"></use>
-                  </svg>
-                  <span class="features-content__list-txt">Вежливые курьеры</span>
-                </li>
-                <li class="features-content__list-item">
-                  <svg class="features-content__img features-content__img--restorant">
-                    <use xlink:href="images/sprite.svg#icon-restorant"></use>
-                  </svg>
-                  <span class="features-content__list-txt">Более 500 заведений</span>
-                </li>
-              </ul>
-              <button class="hero__btn animation-btn" type="button">Подробнее</button>
-            </div>
-          </div>
-        </section>
 
         <section class="section restorant">
           <div class="container">
@@ -476,7 +458,7 @@
                   </div>
                 </article>
               </li>
-              <li class="restorant__item">
+              <!-- <li class="restorant__item">
                 <article class="restorant-card">
                   <img class="restorant-card__img" src="images/restorant/4.png" width="370" height="300"
                     alt="ресторан McDonald`s">
@@ -543,86 +525,11 @@
                     </div>
                   </div>
                 </article>
-              </li>
+              </li> -->
             </ul>
           </div>
         </section>
 
-        <section class="section testimonials">
-          <div class="container-wide">
-            <h2 class="title">Отзывы клиентов</h2>
-            <div class="slider">
-              <div class="testimonials-slider">
-                <div class="testimonials-slider__content d-flex slider-content">
-                  <img class="slider-content__img" src="images/testimonial-photo.png" alt="фотография пользователя">
-                  <figure class="slider-content__content">
-                    <blockquote class="slider-content__blockquote">
-                      SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный сайт
-                      и приложение. Их доставщики очень вежливы и пунктуальны. Компания часто проводит акции и дарит
-                      скидки на доставку - однозначно рекомендую!
-                    </blockquote>
-                    <figcaption class="slider-content__author">
-                      <span class="slider-content__author-name">Дарья</span>
-                      <span class="slider-content__author-description">Ценитель вкусной еды</span>
-                    </figcaption>
-                  </figure>
-                </div>
-              </div>
-              <div class="testimonials-slider">
-                <div class="testimonials-slider__content d-flex slider-content">
-                  <img class="slider-content__img" src="images/testimonial-photo.png" alt="фотография пользователя">
-                  <figure class="slider-content__content">
-                    <blockquote class="slider-content__blockquote">
-                      SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный сайт
-                      и приложение. Их доставщики очень вежливы и пунктуальны. Компания часто проводит акции и дарит
-                      скидки на доставку - однозначно рекомендую!
-                    </blockquote>
-                    <figcaption class="slider-content__author">
-                      <h4 class="slider-content__author-name">Дарья</h4>
-                      <span class="slider-content__author-description">Ценитель вкусной еды</span>
-                    </figcaption>
-                  </figure>
-                </div>
-              </div>
-              <div class="testimonials-slider">
-                <div class="testimonials-slider__content d-flex slider-content">
-                  <img class="slider-content__img" src="images/testimonial-photo.png" alt="фотография пользователя">
-                  <figure class="slider-content__content">
-                    <blockquote class="slider-content__blockquote">
-                      SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный сайт
-                      и приложение. Их доставщики очень вежливы и пунктуальны. Компания часто проводит акции и дарит
-                      скидки на доставку - однозначно рекомендую!
-                    </blockquote>
-                    <figcaption class="slider-content__author">
-                      <h4 class="slider-content__author-name">Дарья</h4>
-                      <span class="slider-content__author-description">Ценитель вкусной еды</span>
-                    </figcaption>
-                  </figure>
-                </div>
-              </div>
-              <div class="testimonials-slider">
-                <div class="testimonials-slider__content d-flex slider-content">
-                  <img class="slider-content__img" src="images/testimonial-photo.png" alt="фотография пользователя">
-                  <figure class="slider-content__content">
-                    <blockquote class="slider-content__blockquote">
-                      SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный сайт
-                      и приложение. Их доставщики очень вежливы и пунктуальны. Компания часто проводит акции и дарит
-                      скидки на доставку - однозначно рекомендую!
-                    </blockquote>
-                    <figcaption class="slider-content__author">
-                      <h4 class="slider-content__author-name">Дарья</h4>
-                      <span class="slider-content__author-description">Ценитель вкусной еды</span>
-                    </figcaption>
-                  </figure>
-                </div>
-              </div>
-            </div>
-
-            <div class="slider-navigation">
-              <div class="slider-navigation__dots"></div>
-            </div>
-          </div>
-        </section>
 
         <section class="section application">
           <div class="container d-flex">
@@ -647,7 +554,7 @@
       </main>
     </div>
 
-    <footer class="footer" id="contacts">
+    <!-- <footer class="footer" id="contacts">
       <div class="container">
         <div class="footer-top d-flex">
           <div class="footer-content footer-top__first">
@@ -770,7 +677,7 @@
       <div class="footer-bottom">
         <span class="footer-bottom__txt">© 2022 Simple Food</span>
       </div>
-    </footer>
+    </footer> -->
   </div>
   <script src="js/main.min.js"></script>
 </body>
