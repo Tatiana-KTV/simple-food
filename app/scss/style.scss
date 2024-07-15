@@ -1971,14 +1971,18 @@ body.lock {
     line-height: 1.2;
     letter-spacing: 0.03em;
     color: $gray;
+    display: block;
+
   }
   &__data-from,
   &__data-to {
-    padding: 12px 14px;
+    padding: 12px 13px;
     background-color: rgba($orange-700, 0.1);
     border-radius: 3px;
     border: 1px solid $silver-200;
+    color: $dark-blue900;
     width: 70px;
+
     margin: 0 5px;
   }
 }

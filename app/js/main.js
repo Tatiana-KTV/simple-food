@@ -1,66 +1,35 @@
 $(function () {
 
-  var $range = $(".form-price__input"),
-    $inputFrom = $(".form-price__data-from"),
-    $inputTo = $(".form-price__data-to"),
-    instance
-    min = 0,
-    max = 1000,
-    from = 0,
-    to = 0;
 
-  $('.form-price__input').ionRangeSlider({
-    type: "double",
-  });
+     $(".form-price__input").ionRangeSlider({
+       type: "double",
+       from: "100",
+       to: "800",
+       onStart: function (data) {
+$('.form-price__data-from').text(data.from),
+  $('.form-price__data-to').text(data.to)
+       },
+      onChange: function (data) {
+        $('.form-price__data-from').text(data.from),
+        $('.form-price__data-to').text(data.to)
+      }
+     });
 
-  $range.ionRangeSlider({
-    type: "double",
-    min: min,
-    max: max,
-    // from: 200,
-    // to: 800,
-    onStart: updateInputs,
-    onChange: updateInputs
-  });
-  instance = $range.data("ionRangeSlider");
 
-  function updateInputs(data) {
-    from = data.from;
-    to = data.to;
 
-    $inputFrom.prop("value", from);
-    $inputTo.prop("value", to);
-  }
 
-  $inputFrom.on("input", function () {
-    var val = $(this).prop("value");
 
-    // validate
-    if (val < min) {
-      val = min;
-    } else if (val > to) {
-      val = to;
-    }
 
-    instance.update({
-      from: val
-    });
-  });
 
-  $inputTo.on("input", function () {
-    var val = $(this).prop("value");
 
-    // validate
-    if (val < from) {
-      val = from;
-    } else if (val > max) {
-      val = max;
-    }
 
-    instance.update({
-      to: val
-    });
-  });
+
+
+
+
+
+
+
 
   $('.slider').slick({
     dots: true,
