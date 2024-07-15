@@ -1,4 +1,6 @@
 $(function () {
+  $('.select-style').styler(),
+
   $(".form-price__input").ionRangeSlider({
     type: "double",
     from: "100",

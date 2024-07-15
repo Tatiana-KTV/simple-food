@@ -1857,6 +1857,10 @@ body.lock {
   }
 }
 
+.container {
+  border: 1px solid blue;
+}
+
 .catalog {
   padding: 60px 0;
   border: 1px solid red;
@@ -1867,6 +1871,18 @@ body.lock {
     margin-bottom: 60px;
     border: 1px solid green;
   }
+
+&__item {
+    background-color: $white;
+    border: 1px solid $silver-200;
+    border-radius: 5px;
+    width: 270px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
 }
 
 .filter {
@@ -1928,7 +1944,8 @@ body.lock {
 
   &__input {
     @extend %inputhide;
-    &:checked + .form-offer__checkbox {
+
+    &:checked+.form-offer__checkbox {
       border: 1px solid $dark-blue900;
       background-image: url('../images/icons/checked.svg');
       @include pseudo;
@@ -1967,6 +1984,7 @@ body.lock {
     align-items: center;
     margin: 15px 0;
   }
+
   &__buttons-txt {
     margin-right: 7px;
     font-size: 16px;
@@ -1984,7 +2002,7 @@ body.lock {
     border-radius: 3px;
     border: 1px solid $silver-200;
     color: $dark-blue900;
-        display: inline-flex;
+    display: inline-flex;
     width: 70px;
     margin: 0 5px;
   }
@@ -2006,6 +2024,7 @@ body.lock {
     background-color: $gray;
     border-radius: 4px;
   }
+
   .irs--flat .irs-bar {
     top: 30px;
     height: 2px;
@@ -2024,3 +2043,68 @@ body.lock {
     background-color: #ff6838;
   }
 }
+
+
+
+.jq-selectbox__select {
+  position: relative;
+  height: 47px;
+  // width: 150px;
+      padding: 15px 41px 15px 15px;
+  border-radius: 3px;
+  background-color: $white;
+  background: linear-gradient($white, $white);
+  box-shadow: none;
+  color: $dark;
+  text-shadow: none;
+  border: 1px solid $silver-200;
+  border-radius: 3px;
+  outline: none;
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-align: center;
+  &:hover {
+    background: linear-gradient(#f6f6f600, #e6e6e600);
+  }
+
+  .jq-selectbox__trigger {
+    border-left: none;
+  }
+}
+
+.jq-selectbox__select-text {
+  overflow: visible;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.jq-selectbox li.selected {
+  background-color: rgba($orange-700, 0.1);
+  color: $dark;
+  font: inherit;
+}
+
+.jq-selectbox__trigger {
+  top: 0;
+  right: 0;
+  width: 34px;
+  height: 100%;
+}
+
+.jq-selectbox__trigger-arrow {
+  position: absolute;
+  top: 20px;
+  right: 12px;
+  background-image: url('../images/icons/chevron-down.svg');
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 6px;
+  border: none;
+}
+
