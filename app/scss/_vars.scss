@@ -37,3 +37,12 @@ $breakpoints: ("phone": 560px,
   font-family: 'Rubik', sans-serif;
   font-weight: 500;
 }
+
+%inputhide {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+  margin-left: -300px;
+}

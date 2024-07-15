@@ -70,7 +70,7 @@ body.lock {
 
     &.header-fixed {
       padding: 30px 0;
-      background-color: rgba($gray, 0.6);
+      background-color: rgba($gray, 0.9);
       box-shadow: 0px -3px 15px 25px rgba($gray, 0.13);
     }
   }
@@ -367,9 +367,9 @@ body.lock {
   &__filter {
     // flex-wrap: wrap;
     overflow: auto;
-    padding: 2px 0;
+    padding: 3px 3px;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 27px;
   }
 
   &__list {
@@ -1818,7 +1818,6 @@ body.lock {
 ///--------------------------------
 
 .wrappwer-wide {
-  // padding: 24px 0;
   background-color: rgba($orange-700, 0.1);
 }
 
@@ -1832,6 +1831,7 @@ body.lock {
 
   &__item:not(:last-child) {
     margin-right: 20px;
+
     &::after {
       @include pseudo;
       background-image: url('../images/icons/chevron.svg');
@@ -1840,12 +1840,13 @@ body.lock {
       top: 6px;
       right: -13px;
     }
+
     @media (any-hover: hover) {
       :hover {
         color: $orange-900;
       }
     }
-    
+
   }
 
   &__elem {
@@ -1854,6 +1855,130 @@ body.lock {
     font-size: 14px;
     color: $lightgray;
   }
+}
 
+.catalog {
+  padding: 60px 0;
+  border: 1px solid red;
 
+  &__top {
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    border: 1px solid green;
+  }
+}
+
+.filter {
+
+  &__item {
+    background-color: $white;
+    border: 1px solid $silver-200;
+    border-radius: 5px;
+    width: 270px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item-title {
+    border-bottom: 1px solid $silver-200;
+    padding: 15px;
+    color: $dark-blue900;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+  }
+
+  &__item-form {
+    padding: 25px 15px 21px 15px;
+  }
+}
+
+.form-category {
+  &__input {
+    @extend %inputhide;
+
+    &:checked+.form-category__checkbox {
+      background-color: rgba($orange-700, 0.1);
+    }
+  }
+
+  &__checkbox {
+    font-size: 18px;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+    padding: 4px 0;
+    margin-bottom: 4px;
+    cursor: pointer;
+  }
+}
+
+.form-offer {
+  &__label {
+    align-items: center;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+  }
+
+  &__input {
+    @extend %inputhide;
+    &:checked + .form-offer__checkbox {
+      border: 1px solid $dark-blue900;
+      background-image: url('../images/icons/checked.svg');
+      @include pseudo;
+      background-size: initial;
+    }
+  }
+
+  &__box {
+    position: relative;
+  }
+
+  &__checkbox {
+    position: absolute;
+    border: 1px solid $silver-200;
+    border-radius: 3px;
+    width: 24px;
+    height: 24px;
+    bottom: -12px;
+    background-color: rgba($orange-700, 0.1);
+  }
+
+  &__text {
+    display: block;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: 0.03em;
+    margin-left: 36px;
+  }
+}
+
+.form-price {
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__buttons-txt {
+    margin-right: 7px;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: $gray;
+  }
+  &__data-from,
+  &__data-to {
+    padding: 12px 14px;
+    background-color: rgba($orange-700, 0.1);
+    border-radius: 3px;
+    border: 1px solid $silver-200;
+    width: 70px;
+    margin: 0 5px;
+  }
 }

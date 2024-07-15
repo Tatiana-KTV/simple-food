@@ -1,4 +1,67 @@
 $(function () {
+
+  var $range = $(".form-price__input"),
+    $inputFrom = $(".form-price__data-from"),
+    $inputTo = $(".form-price__data-to"),
+    instance
+    min = 0,
+    max = 1000,
+    from = 0,
+    to = 0;
+
+  $('.form-price__input').ionRangeSlider({
+    type: "double",
+  });
+
+  $range.ionRangeSlider({
+    type: "double",
+    min: min,
+    max: max,
+    // from: 200,
+    // to: 800,
+    onStart: updateInputs,
+    onChange: updateInputs
+  });
+  instance = $range.data("ionRangeSlider");
+
+  function updateInputs(data) {
+    from = data.from;
+    to = data.to;
+
+    $inputFrom.prop("value", from);
+    $inputTo.prop("value", to);
+  }
+
+  $inputFrom.on("input", function () {
+    var val = $(this).prop("value");
+
+    // validate
+    if (val < min) {
+      val = min;
+    } else if (val > to) {
+      val = to;
+    }
+
+    instance.update({
+      from: val
+    });
+  });
+
+  $inputTo.on("input", function () {
+    var val = $(this).prop("value");
+
+    // validate
+    if (val < from) {
+      val = from;
+    } else if (val > max) {
+      val = max;
+    }
+
+    instance.update({
+      to: val
+    });
+  });
+
   $('.slider').slick({
     dots: true,
     focusOnSelect: true,
@@ -38,32 +101,32 @@ $(document).scroll(function (e) {
 document.addEventListener('DOMContentLoaded', () => {
 
   const burger = document.querySelector('.burger');
-  const mobileMenu = document.querySelector('.burger-menu'); 
-  const bodyLock = document.querySelector('body'); 
+  const mobileMenu = document.querySelector('.burger-menu');
+  const bodyLock = document.querySelector('body');
   const burgerNew = document.querySelector('.burger-new');
 
   burger.addEventListener('click', () => {
     mobileMenu.classList.add('burger-menu--active');
     if (mobileMenu.classList.contains('burger-menu--active')) {
-      burgerNew.classList.add('burger--active'); 
-      bodyLock.classList.add('lock'); 
-    } else { 
-      burgerNew.classList.remove('burger--active'); 
-      bodyLock.classList.remove('lock'); 
+      burgerNew.classList.add('burger--active');
+      bodyLock.classList.add('lock');
+    } else {
+      burgerNew.classList.remove('burger--active');
+      bodyLock.classList.remove('lock');
     }
   });
   burgerNew.addEventListener('click', () => {
     mobileMenu.classList.remove('burger-menu--active');
-    burgerNew.classList.remove('burger--active'); 
+    burgerNew.classList.remove('burger--active');
     bodyLock.classList.remove('lock');
   })
 
 });
 
-$(window).on('load resize', function(){
+$(window).on('load resize', function () {
   if ($(window).width() < 768) {
     $('.restorant__list:not(.slick-initialized)').slick({
-      arrows:false,
+      arrows: false,
       dots: true,
       infinite: true,
       speed: 100,
