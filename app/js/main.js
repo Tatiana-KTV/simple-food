@@ -1,35 +1,17 @@
 $(function () {
-
-
-     $(".form-price__input").ionRangeSlider({
-       type: "double",
-       from: "100",
-       to: "800",
-       onStart: function (data) {
-$('.form-price__data-from').text(data.from),
-  $('.form-price__data-to').text(data.to)
-       },
-      onChange: function (data) {
-        $('.form-price__data-from').text(data.from),
+  $(".form-price__input").ionRangeSlider({
+    type: "double",
+    from: "100",
+    to: "800",
+    onStart: function (data) {
+      $('.form-price__data-from').text(data.from),
         $('.form-price__data-to').text(data.to)
-      }
-     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    },
+    onChange: function (data) {
+      $('.form-price__data-from').text(data.from),
+        $('.form-price__data-to').text(data.to)
+    }
+  });
 
   $('.slider').slick({
     dots: true,

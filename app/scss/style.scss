@@ -1960,10 +1960,12 @@ body.lock {
 }
 
 .form-price {
+
   &__buttons {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 15px 0;
   }
   &__buttons-txt {
     margin-right: 7px;
@@ -1971,18 +1973,54 @@ body.lock {
     line-height: 1.2;
     letter-spacing: 0.03em;
     color: $gray;
-    display: block;
-
+    display: flex;
+    align-items: center;
   }
+
   &__data-from,
   &__data-to {
-    padding: 12px 13px;
+    padding: 12px 15px;
     background-color: rgba($orange-700, 0.1);
     border-radius: 3px;
     border: 1px solid $silver-200;
     color: $dark-blue900;
+        display: inline-flex;
     width: 70px;
-
     margin: 0 5px;
+  }
+
+  .irs--flat .irs-from,
+  .irs--flat .irs-to,
+  .irs--flat .irs-single {
+    display: none;
+  }
+
+  .irs-min,
+  .irs-max {
+    display: none;
+  }
+
+  .irs--flat .irs-line {
+    top: 30px;
+    height: 2px;
+    background-color: $gray;
+    border-radius: 4px;
+  }
+  .irs--flat .irs-bar {
+    top: 30px;
+    height: 2px;
+    background-color: $orange-900;
+  }
+
+  .irs--flat .irs-handle>i:first-child {
+    display: none;
+  }
+
+  .irs--flat .irs-handle {
+    top: 22px;
+    width: 18px;
+    border-radius: 50%;
+    height: 18px;
+    background-color: #ff6838;
   }
 }
