@@ -29,10 +29,10 @@
               </a>
               <ul class="menu hide d-flex">
                 <li class="menu__item">
-                  <a class="menu__link active animation" href="index.html">Главная</a>
+                  <a class="menu__link  animation" href="index.html">Главная</a>
                 </li>
                 <li class="menu__item">
-                  <a class="menu__link animation" href="catalog.html" target="_blank"
+                  <a class="menu__link active animation" href="catalog.html" target="_blank"
                     rel="noopener noreferrer">Блюда</a>
                 </li>
                 <li class="menu__item">
@@ -175,26 +175,127 @@
             </ul>
           </div>
         </div>
-        <div class="container">
-          <div class="catalog">
+        <section class="catalog">
+          <div class="container">
             <div class="catalog__top d-flex">
-              <h2 class="catalog__title title">Каталог продуктов</h2>
-              <div class="catalog__top-filter top-filter">
+              <h1 class="catalog__title title">Каталог продуктов</h1>
+              
+              <div class="catalog__top-filter top-filter d-flex">
+                <div class="filter-menu">
+                  <div class="filter__item">
+                    <button class=" filter-menu__close-btn" type="button">
+                      <span class="filter-menu__line"></span>
+                      <span class="sr-only">Закрыть меню</span>
+                    </button>
+                    <h3 class="filter__item-title">Категории</h3>
+                     <form class="filter__item-form form-category" action="#">
+                      <label class="form-category__label">
+                        <input class="form-category__input" type="checkbox">
+                        <div class="form-category__checkbox">Бургеры</div>
+                      </label>
+                      <label class="form-category__label">
+                        <input class="form-category__input" type="checkbox">
+                        <div class="form-category__checkbox">Пицца</div>
+                      </label>
+                      <label class="form-category__label">
+                        <input class="form-category__input" type="checkbox">
+                        <div class="form-category__checkbox">Сендвичи</div>
+                      </label>
+                      <label class="form-category__label">
+                        <input class="form-category__input" type="checkbox">
+                        <div class="form-category__checkbox">Азиатская кухня</div>
+                      </label>
+                      <label class="form-category__label">
+                        <input class="form-category__input" type="checkbox">
+                        <div class="form-category__checkbox">Сеты</div>
+                      </label>
+                      <label class="form-category__label">
+                        <input class="form-category__input" type="checkbox">
+                        <div class="form-category__checkbox">Европейская кухня</div>
+                      </label>
+                      <label class="form-category__label">
+                        <input class="form-category__input" type="checkbox">
+                        <div class="form-category__checkbox">Напитки</div>
+                      </label>
+                      <label class="form-category__label">
+                        <input class="form-category__input" type="checkbox">
+                        <div class="form-category__checkbox">Алкоголь</div>
+                      </label>
+                    </form> 
+                    <label for="#">
+                      <input type="text"> ooo
+                    </label>
+                    
+                  </div>
+                  <div class="filter__item">
+                    <h3 class="filter__item-title">Предложения</h3>
+                    <form class="filter__item-form form-offer" action="#">
+                      <label class="form-offer__label d-flex">
+                        <div class="form-offer__box">
+                          <input class="form-offer__input" type="checkbox">
+                          <span class="form-offer__checkbox "></span>
+                        </div>
+                        <span class="form-offer__text">Со скидкой</span>
+                      </label>
+                      <label class="form-offer__label d-flex">
+                        <div class="form-offer__box">
+                          <input class="form-offer__input" type="checkbox" checked>
+                          <span class="form-offer__checkbox "></span>
+                        </div>
+                        <span class="form-offer__text">Новинка</span>
+                      </label>
+                      <label class="form-offer__label d-flex">
+                        <div class="form-offer__box">
+                          <input class="form-offer__input" type="checkbox">
+                          <span class="form-offer__checkbox "></span>
+                        </div>
+                        <span class="form-offer__text">Хит</span>
+                      </label>
+                    </form>
+                  </div>
+                  <div class="filter__item">
+                    <h3 class="filter__item-title">Цена</h3>
+                    <form class="filter__item-form form-price" action="#">
+                      <div class=" form-price__buttons">
+                        <div class="form-price__buttons-txt">от
+                          <span class="form-price__data-from" type="text"> </span> ₴</div>
+                        <div class="form-price__buttons-txt">до
+                          <span class="form-price__data-to" type="text"> </span>₴</div>
+                      </div>
+                      <input class="form-price__input" type="text" data-min="0" data-max="1200" data-from="100"
+                        data-to="1000">
+                    </form>
+                  </div>
+                </div>
+                <button class="top-filter__btn">
+                  <svg width="32" height="36" viewBox="0 0 32 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_669_558)">
+                      <path
+                        d="M13.7804 28.1251H1.13878C0.510161 28.1251 9.68073e-07 28.6291 9.95549e-07 29.2501C1.02303e-06 29.8711 0.510218 30.3751 1.13878 30.3751H13.7803C14.3076 32.9423 16.6046 34.8751 19.3593 34.8751C22.114 34.8751 24.4108 32.9423 24.938 30.3751H30.7469C31.3755 30.3751 31.8857 29.8711 31.8857 29.2501C31.8857 28.6291 31.3755 28.1251 30.7469 28.1251H24.9383C24.411 25.5578 22.114 23.6251 19.3593 23.6251C16.6047 23.6251 14.3076 25.5578 13.7804 28.1251ZM22.7755 29.2501C22.7755 31.1142 21.2463 32.6251 19.3593 32.6251C17.4723 32.6251 15.9429 31.1142 15.9429 29.2501C15.9429 27.3859 17.4723 25.8751 19.3593 25.8751C21.2463 25.8751 22.7755 27.3859 22.7755 29.2501ZM2.39261 16.875H1.13878C0.510161 16.875 4.70298e-07 17.3791 4.97775e-07 18C5.25251e-07 18.621 0.510161 19.125 1.13878 19.125H2.39255C2.9198 21.6923 5.21671 23.6251 7.97145 23.6251C10.7262 23.6251 13.023 21.6923 13.5503 19.125H30.7469C31.3755 19.125 31.8857 18.621 31.8857 18C31.8857 17.379 31.3755 16.875 30.7469 16.875H13.5503C13.0231 14.3078 10.7262 12.375 7.9715 12.375C5.21682 12.375 2.91984 14.3078 2.39261 16.875ZM11.3878 18C11.3878 19.8642 9.8584 21.375 7.97145 21.375C6.08448 21.375 4.5551 19.8642 4.5551 18C4.5551 16.1359 6.08448 14.625 7.97145 14.625C9.8584 14.625 11.3878 16.1359 11.3878 18ZM18.3355 5.62502H1.13878C0.510161 5.62502 -2.74764e-08 6.12906 0 6.75001C2.74741e-08 7.37097 0.510161 7.87501 1.13878 7.87501H18.3355C18.8627 10.4423 21.1597 12.375 23.9143 12.375C26.669 12.375 28.9659 10.4423 29.4931 7.87501H30.7469C31.3755 7.87501 31.8857 7.37097 31.8857 6.75001C31.8857 6.12906 31.3755 5.62502 30.7469 5.62502H29.4931C28.9659 3.05774 26.669 1.125 23.9143 1.125C21.1597 1.125 18.8628 3.05774 18.3355 5.62502ZM27.3306 6.75001C27.3306 8.61414 25.8012 10.125 23.9143 10.125C22.0274 10.125 20.498 8.61414 20.498 6.75001C20.498 4.88587 22.0274 3.37499 23.9143 3.37499C25.8012 3.37499 27.3306 4.88587 27.3306 6.75001Z"
+                        fill="#363853" />
+                    </g>
+                    <defs>
+                      <clippath id="clip0_669_558">
+                        <rect width="31.8857" height="36" fill="white" />
+                      </clippath>
+                    </defs>
+                  </svg>
+                </button>
                 <select class="top-filter__sort select-style">
-                  <option value="">По названию</option>
-                  <option value="">По цене</option>
-                  <option value="">По весу</option>
-                  <option value="">По категории</option>
+                  <option value="#">По цене</option>
+                  <option value="#">По названию</option>
+                  <option value="#">По весу</option>
+                  <option value="#">По категории</option>
                 </select>
                 <select class="top-filter__show select-style">
-                  <option value="">по 12</option>
-                  <option value="">по 16</option>
-                  <option value="">по 8</option>
-                  <option value="">по 4</option>
+                  <option value="#">по 12</option>
+                  <option value="#">по 16</option>
+                  <option value="#">по 8</option>
+                  <option value="#">по 4</option>
                 </select>
               </div>
             </div>
-            <div class="catalog__content">
+            <div class="catalog__content d-flex">
               <div class="catalog__filters filter">
                 <div class="filter__item">
                   <h3 class="filter__item-title">Категории</h3>
@@ -274,21 +375,177 @@
                 </div>
               </div>
 
-
-
-
-
               <div class="catalog__cards">
-
+                <ul class="catalog-list">
+                  <li class="catalog-list__item">
+                    <article class="product-card">
+                      <img class="product-card__item-img" src="images/popular/1.png" width="140" height="140"
+                        alt="фото Чизбургер с листьями салата">
+                      <h3 class="product-card__item-title">Чизбургер с листьями салата</h3>
+                      <span class="product-card__item-info">
+                        <span class="product-card__item-price">160</span>
+                        <span class="product-card__item-currency">грн.</span>
+                      </span>
+                      <button class="product-card__item-btn animation-btn" type="button">В корзину</button>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product-card">
+                      <img class="product-card__item-img" src="images/popular/2.png" width="140" height="140"
+                        alt="фото Бифбургер">
+                      <h3 class="product-card__item-title">Бифбургер</h3>
+                      <span class="product-card__item-info">
+                        <span class="product-card__item-price">190</span>
+                        <span class="product-card__item-currency">грн.</span>
+                      </span>
+                      <button class="product-card__item-btn animation-btn" type="button">В корзину</button>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product-card">
+                      <img class="product-card__item-img" width="140" height="140" src="images/popular/3.png"
+                        alt="фото Королевский чизбургер">
+                      <h3 class="product-card__item-title">Королевский чизбургер</h3>
+                      <span class="product-card__item-info">
+                        <span class="product-card__item-price">260</span>
+                        <span class="product-card__item-currency">грн.</span>
+                      </span>
+                      <button class="product-card__item-btn animation-btn" type="button">В корзину</button>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product-card">
+                      <img class="product-card__item-img" src="images/popular/4.png" width="140" height="140"
+                        alt="фото Черный гамбургер">
+                      <h3 class="product-card__item-title">Черный гамбургер</h3>
+                      <span class="product-card__item-info">
+                        <span class="product-card__item-price">199</span>
+                        <span class="product-card__item-currency">грн.</span>
+                      </span>
+                      <button class="product-card__item-btn animation-btn" type="button">В корзину</button>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product-card">
+                      <img class="product-card__item-img" src="images/popular/1.png" width="140" height="140"
+                        alt="фото Чизбургер с листьями салата">
+                      <h3 class="product-card__item-title">Чизбургер с листьями салата</h3>
+                      <span class="product-card__item-info">
+                        <span class="product-card__item-price">160</span>
+                        <span class="product-card__item-currency">грн.</span>
+                      </span>
+                      <button class="product-card__item-btn animation-btn" type="button">В корзину</button>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product-card">
+                      <img class="product-card__item-img" src="images/popular/2.png" width="140" height="140"
+                        alt="фото Бифбургер">
+                      <h3 class="product-card__item-title">Бифбургер</h3>
+                      <span class="product-card__item-info">
+                        <span class="product-card__item-price">190</span>
+                        <span class="product-card__item-currency">грн.</span>
+                      </span>
+                      <button class="product-card__item-btn animation-btn" type="button">В корзину</button>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product-card">
+                      <img class="product-card__item-img" width="140" height="140" src="images/popular/3.png"
+                        alt="фото Королевский чизбургер">
+                      <h3 class="product-card__item-title">Королевский чизбургер</h3>
+                      <span class="product-card__item-info">
+                        <span class="product-card__item-price">260</span>
+                        <span class="product-card__item-currency">грн.</span>
+                      </span>
+                      <button class="product-card__item-btn animation-btn" type="button">В корзину</button>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product-card">
+                      <img class="product-card__item-img" src="images/popular/4.png" width="140" height="140"
+                        alt="фото Черный гамбургер">
+                      <h3 class="product-card__item-title">Черный гамбургер</h3>
+                      <span class="product-card__item-info">
+                        <span class="product-card__item-price">199</span>
+                        <span class="product-card__item-currency">грн.</span>
+                      </span>
+                      <button class="product-card__item-btn animation-btn" type="button">В корзину</button>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product-card">
+                      <img class="product-card__item-img" src="images/popular/1.png" width="140" height="140"
+                        alt="фото Чизбургер с листьями салата">
+                      <h3 class="product-card__item-title">Чизбургер с листьями салата</h3>
+                      <span class="product-card__item-info">
+                        <span class="product-card__item-price">160</span>
+                        <span class="product-card__item-currency">грн.</span>
+                      </span>
+                      <button class="product-card__item-btn animation-btn" type="button">В корзину</button>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product-card">
+                      <img class="product-card__item-img" src="images/popular/2.png" width="140" height="140"
+                        alt="фото Бифбургер">
+                      <h3 class="product-card__item-title">Бифбургер</h3>
+                      <span class="product-card__item-info">
+                        <span class="product-card__item-price">190</span>
+                        <span class="product-card__item-currency">грн.</span>
+                      </span>
+                      <button class="product-card__item-btn animation-btn" type="button">В корзину</button>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product-card">
+                      <img class="product-card__item-img" width="140" height="140" src="images/popular/3.png"
+                        alt="фото Королевский чизбургер">
+                      <h3 class="product-card__item-title">Королевский чизбургер</h3>
+                      <span class="product-card__item-info">
+                        <span class="product-card__item-price">260</span>
+                        <span class="product-card__item-currency">грн.</span>
+                      </span>
+                      <button class="product-card__item-btn animation-btn" type="button">В корзину</button>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product-card">
+                      <img class="product-card__item-img" src="images/popular/4.png" width="140" height="140"
+                        alt="фото Черный гамбургер">
+                      <h3 class="product-card__item-title">Черный гамбургер</h3>
+                      <span class="product-card__item-info">
+                        <span class="product-card__item-price">199</span>
+                        <span class="product-card__item-currency">грн.</span>
+                      </span>
+                      <button class="product-card__item-btn animation-btn" type="button">В корзину</button>
+                    </article>
+                  </li>
+                </ul>
+                <div class="pagination d-flex">
+                  <span class="pagination__link pagination__arrow active pagination__arrow--prev">
+                    <svg class="pagination__arrow-icon pagination__arrow-icon--prev">
+                      <use xlink:href="images/sprite.svg#chevron"></use>
+                    </svg>
+                  </span>
+                  <span class="pagination__link active">1</span>
+                  <a class="pagination__link" href="#">2</a>
+                  <span class="pagination__link pagination__disabled" href="#">...</span>
+                  <a class="pagination__link" href="#">9</a>
+                  <a class="pagination__link" href="#">10</a>
+                  <a class="pagination__link pagination__arrow pagination__arrow--next" href="#">
+                    <svg class="pagination__arrow-icon">
+                      <use xlink:href="images/sprite.svg#chevron"></use>
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
 
+        </section>
 
-
-        <!-- 
         <section class="section application">
           <div class="container d-flex">
             <div class="application-content">
@@ -308,11 +565,42 @@
             </div>
             <div class="application-img" style="background-image: url('images/application-img.jpg')"></div>
           </div>
-        </section> -->
+        </section>
+
+        <section class="promo">
+          <div class="container">
+            <h2 class="title promo__title">Акции и скидки</h2>
+            <ul class="promo__list">
+              <li class="promo__item">
+                <article class="promo-card">
+                  <img class="promo-card__img" src="images/promo/1.jpg" alt="фотография пиццы по акции" width="370"
+                    height="300">
+                  <h3 class="promo-card__title">Скидка 50% на вторую пиццу</h3>
+                </article>
+              </li>
+              <li class="promo__item">
+                <article class="promo-card">
+                  <img class="promo-card__img" src="images/promo/2.jpg" alt="фотография картошки в подарок" width="370"
+                    height="300">
+                  <h3 class="promo-card__title">Картошечка из KFC даром при заказе бургера</h3>
+                </article>
+              </li>
+              <li class="promo__item">
+                <article class="promo-card">
+                  <img class="promo-card__img" src="images/promo/3.jpg" alt="фотография черного бургера" width="370"
+                    height="300">
+                  <h3 class="promo-card__title">Чёрные бургеры на чёрный день </h3>
+                </article>
+              </li>
+            </ul>
+          </div>
+
+        </section>
+
       </main>
     </div>
 
-    <!-- <footer class="footer" id="contacts">
+       <footer class="footer" id="contacts">
       <div class="container">
         <div class="footer-top d-flex">
           <div class="footer-content footer-top__first">
@@ -435,7 +723,7 @@
       <div class="footer-bottom">
         <span class="footer-bottom__txt">© 2022 Simple Food</span>
       </div>
-    </footer> -->
+    </footer>   
   </div>
   <script src="js/main.min.js"></script>
 </body>
