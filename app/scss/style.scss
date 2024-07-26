@@ -2086,145 +2086,81 @@ body {
   }
 }
 
-.form-category {
-  &__input {
-    @extend %inputhide;
 
-    &:checked+.form-category__checkbox {
-      background-color: rgba($orange-700, 0.1);
-    }
-  }
-
-  &__checkbox {
-    font-size: 18px;
-    line-height: 1.3;
-    letter-spacing: 0.03em;
-    padding: 4px 0;
-    margin-bottom: 4px;
-    cursor: pointer;
-
-    &:hover {
-      color: $orange-900;
-    }
-
-    &:active {
-      text-shadow: 2px 2px 5px 0 rgba(54, 56, 83, 0.5);
-    }
-  }
-}
 
 .form-offer {
-  &__label {
-    align-items: center;
-    cursor: pointer;
 
+  &__item {
+    position: relative;
+    padding-left: 35px;
     &:not(:last-child) {
       margin-bottom: 12px;
     }
-
   }
 
-  &__input {
-    @extend %inputhide;
+  &__label {
+    font-size: 18px;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+    transition: color 0.3s;
 
-    &:checked+.form-offer__checkbox {
-      border: 1px solid $dark-blue900;
-      background-image: url('../images/icons/checked.svg');
-      @include pseudo;
-      background-size: initial;
+    &:focus {
+      color: $dark;
     }
-  }
 
-  &__box {
-    position: relative;
+    @media (any-hover: hover) {
+      &:hover {
+        color: $orange-900;
+      }
+    }
   }
 
   &__checkbox {
     position: absolute;
-    border: 1px solid $silver-200;
-    border-radius: 3px;
-    width: 24px;
-    height: 24px;
-    bottom: -12px;
-    background-color: rgba($orange-700, 0.1);
-  }
+    opacity: 0;
 
-  &__text {
-    display: block;
-    font-size: 18px;
-    line-height: 120%;
-    letter-spacing: 0.03em;
-    margin-left: 36px;
-  }
-}
+    &+label {
+      position: relative;
+      cursor: pointer;
+      padding: 0;
+    }
 
-.form-price {
+    &+label:before {
+      position: absolute;
+      content: '';
+      display: inline-block;
+      vertical-align: text-top;
+      left: -35px;
+      width: 24px;
+      height: 24px;
+      background-color: rgba($orange-700, 0.1);
+      border: 1px solid $silver-200;
+      border-radius: 3px;
+    }
 
-  &__buttons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 15px 0;
-  }
+    &:focus+label:before {
+      border: 1px solid $orange-900;
+    }
 
-  &__buttons-txt {
-    margin-right: 7px;
-    font-size: 16px;
-    line-height: 1.2;
-    letter-spacing: 0.03em;
-    color: $gray;
-    display: flex;
-    align-items: center;
-  }
+    @media (any-hover: hover) {
+      &+label:hover:before {
+        border-color: $orange-900;
+      }
+    }
 
-  &__data-from,
-  &__data-to {
-    padding: 12px 15px;
-    background-color: rgba($orange-700, 0.1);
-    border-radius: 3px;
-    border: 1px solid $silver-200;
-    color: $dark-blue900;
-    display: inline-flex;
-    width: 70px;
-    margin: 0 5px;
-  }
+    &:checked+label::before {
+      background-image: url('../images/icons/checked.svg');
+      @include pseudo;
+      background-size: auto;
+      border: 1px solid $dark;
 
-  .irs--flat .irs-from,
-  .irs--flat .irs-to,
-  .irs--flat .irs-single {
-    display: none;
-  }
-
-  .irs-min,
-  .irs-max {
-    display: none;
-  }
-
-  .irs--flat .irs-line {
-    top: 30px;
-    height: 2px;
-    background-color: $gray;
-    border-radius: 4px;
-  }
-
-  .irs--flat .irs-bar {
-    top: 30px;
-    height: 2px;
-    background-color: $orange-900;
-  }
-
-  .irs--flat .irs-handle>i:first-child {
-    display: none;
-  }
-
-  .irs--flat .irs-handle {
-    top: 22px;
-    width: 18px;
-    border-radius: 50%;
-    height: 18px;
-    background-color: #ff6838;
+    }
   }
 }
+
+
+
+
 
 .jq-selectbox {
   &__select {
@@ -2308,27 +2244,29 @@ body {
 
 .filter-menu {
   display: none;
-    &.filter-menu--active {
-      transform: translateY(0);
-    }
 
-    @include mq('tablet-2') {
-      display: flex;
-      flex-direction: column;
-      height: 100vh;
-      width: 40%;
-      overflow-y: auto;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: $silver-100;
-      z-index: 1;
-      position: absolute;
-      transform: translateY(-200%);
-      transition: transform 0.5s;
-      z-index: 10;
-    }
+  &.filter-menu--active {
+    transform: translateY(0);
+  }
+
+  @include mq('tablet-2') {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 40%;
+    overflow-y: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $silver-100;
+    z-index: 1;
+    position: absolute;
+    transform: translateY(-200%);
+    transition: transform 0.5s;
+    z-index: 10;
+  }
+
   &__close-btn {
     display: none;
     width: 30px;
@@ -2610,3 +2548,100 @@ body {
     @include line-clamp(3);
   }
 }
+
+//--------------
+
+.form-test {
+  &__item:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  &__checkbox {
+    position: absolute;
+    opacity: 0;
+  }
+
+  &__label {
+    font-size: 18px;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+  }
+
+}
+
+
+//------------------
+
+// .range-slider {
+//   position: relative;
+//   height: 80px;
+
+// }
+
+// .form-price {
+
+//   &__buttons {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     margin: 15px 0;
+//   }
+
+//   &__buttons-txt {
+//     margin-right: 7px;
+//     font-size: 16px;
+//     line-height: 1.2;
+//     letter-spacing: 0.03em;
+//     color: $gray;
+//     display: flex;
+//     align-items: center;
+//   }
+
+//   &__data-from,
+//   &__data-to {
+//     padding: 12px 15px;
+//     background-color: rgba($orange-700, 0.1);
+//     border-radius: 3px;
+//     border: 1px solid $silver-200;
+//     color: $dark-blue900;
+//     display: inline-flex;
+//     width: 70px;
+//     margin: 0 5px;
+//   }
+
+//   .irs--flat .irs-from,
+//   .irs--flat .irs-to,
+//   .irs--flat .irs-single {
+//     display: none;
+//   }
+
+//   .irs-min,
+//   .irs-max {
+//     display: none;
+//   }
+
+//   .irs--flat .irs-line {
+//     top: 30px;
+//     height: 2px;
+//     background-color: $gray;
+//     border-radius: 4px;
+//   }
+
+//   .irs--flat .irs-bar {
+//     top: 30px;
+//     height: 2px;
+//     background-color: $orange-900;
+//   }
+
+//   .irs--flat .irs-handle>i:first-child {
+//     display: none;
+//   }
+
+//   .irs--flat .irs-handle {
+//     top: 22px;
+//     width: 18px;
+//     border-radius: 50%;
+//     height: 18px;
+//     background-color: #ff6838;
+//   }
+// }
