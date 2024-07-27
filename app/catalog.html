@@ -363,16 +363,24 @@
                 </div>
                 <div class="filter__item">
                   <h3 class="filter__item-title">Цена</h3>
-                  <form class="filter__item-form form-price" action="#">
-                    <div class=" form-price__buttons">
-                      <div class="form-price__buttons-txt">от
-                        <span class="form-price__data-from" type="text"> </span> ₴</div>
-                      <div class="form-price__buttons-txt">до
-                        <span class="form-price__data-to" type="text"> </span>₴</div>
+                  <div class="price-slider">
+                    <div class="price-slider__data d-flex">
+                      <div class="price-slider__from d-flex">
+                        <span class="price-slider__txt">от</span>
+                        <input type="text" class="price-slider__input-from" value="0">
+                        <span class="price-slider__currency">₴</span>
+                      </div>
+                      <div class="price-slider__to d-flex">
+                        <span class="price-slider__txt">до</span>
+                        <input type="text" class="price-slider__input-to" value="0">
+                        <span class="price-slider__currency">₴</span>
+                      </div>
+
                     </div>
-                    <input class="form-price__input" type="text" data-min="0" data-max="1200" data-from="100"
-                      data-to="1000">
-                  </form>
+                    <div class="price-slider__slider">
+                      <input type="text" class="price-slider__input" value="">
+                    </div>
+                  </div>
                 </div>
               </div>
 
