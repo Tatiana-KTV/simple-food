@@ -1,11 +1,11 @@
 $(function () {
 
-var $range = $(".js-range-slider"),
-  $inputFrom = $(".js-input-from"),
-  $inputTo = $(".js-input-to"),
+var $range = $(".price-slider__input"),
+  $inputFrom = $(".price-slider__input-from"),
+  $inputTo = $(".price-slider__input-to"),
   instance,
   min = 0,
-  max = 1000,
+  max = 1200,
   from = 0,
   to = 0;
 
@@ -14,8 +14,8 @@ $range.ionRangeSlider({
   type: "double",
   min: min,
   max: max,
-  from: 200,
-  to: 800,
+  from: 100,
+  to: 1000,
   onStart: updateInputs,
   onChange: updateInputs
 });
