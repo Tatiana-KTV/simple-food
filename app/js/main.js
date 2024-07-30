@@ -32,7 +32,6 @@ function updateInputs(data) {
 $inputFrom.on("input", function () {
   var val = $(this).prop("value");
 
-  // validate
   if (val < min) {
     val = min;
   } else if (val > to) {
@@ -47,7 +46,7 @@ $inputFrom.on("input", function () {
 $inputTo.on("input", function () {
   var val = $(this).prop("value");
 
-  // validate
+
   if (val < from) {
     val = from;
   } else if (val > max) {
@@ -59,42 +58,10 @@ $inputTo.on("input", function () {
   });
 });
 
-
-
-
-
-
-
-  
+ 
   $('.select-style').styler(),
 
-  
 
-    // $(".form-price__input").ionRangeSlider({
-    //   type: "double",
-    //   from: "100",
-    //   to: "800",
-    //   onStart: function (data) {
-    //     $('.form-price__data-from').text(data.from),
-    //       $('.form-price__data-to').text(data.to)
-    //   },
-    //   onChange: function (data) {
-    //     $('.form-price__data-from').text(data.from),
-    //       $('.form-price__data-to').text(data.to)
-    //   }
-    // });
-
-  // $('.slider').slick({
-  //   dots: true,
-  //   focusOnSelect: true,
-  //   arrows: true,
-  //   infinite: false,
-  //   appendDots: '.slider-navigation__dots',
-  //   appendDots: '.slider-navigation',
-  //   appendArrows: '.slider-navigation',
-  //   nextArrow: '<button type="button" class="slider-navigation__arrow slider-navigation__arrow--prev"><svg class="slider-arrow__arrow-left" fill="#000"><use xlink:href="images/sprite.svg#slick-prev-arrow"></use></svg></button>',
-  //   prevArrow: '<button type="button" class="slider-navigation__arrow slider-navigation__arrow--next"><svg class="slider-arrow__arrow-right" fill="#000"><use xlink:href="images/sprite.svg#slick-prev-arrow"></use></svg></button>',
-  // });
 
   $('.slider').slick({
     dots: true,
@@ -150,44 +117,8 @@ $(document).scroll(function (e) {
 
 
 
-
-
-
-
-
-
-
-
-
-// document.addEventListener('DOMContentLoaded', () => {
-
-//   const burger = document.querySelector('.burger');
-//   const mobileMenu = document.querySelector('.burger-menu');
-//   const bodyLock = document.querySelector('body');
-//   const burgerNew = document.querySelector('.burger-new');
-
-//   burger.addEventListener('click', () => {
-//     mobileMenu.classList.add('burger-menu--active');
-//     if (mobileMenu.classList.contains('burger-menu--active')) {
-//       burgerNew.classList.add('burger--active');
-//       bodyLock.classList.add('lock');
-//     } else {
-//       burgerNew.classList.remove('burger--active');
-//       bodyLock.classList.remove('lock');
-//     }
-//   });
-//   burgerNew.addEventListener('click', () => {
-//     mobileMenu.classList.remove('burger-menu--active');
-//     burgerNew.classList.remove('burger--active');
-//     bodyLock.classList.remove('lock');
-//   })
-
-// });
-
 document.addEventListener('DOMContentLoaded', () => {
-
-  //Mobile Menu
-  const burger = document.querySelector('.burger', ); //наша кнопка
+  const burger = document.querySelector('.burger'); //наша кнопка
   const mobileMenu = document.querySelector('.burger-menu'); //мобильное меню
   const bodyLock = document.querySelector('body'); //ищем как селектор ТЕГА
   const burgerClose = document.querySelector(".burger-new");
@@ -216,47 +147,24 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
 document.addEventListener('DOMContentLoaded', () => {
+  const mobileBurger = document.querySelector('.top-filter__btn');
+  const sideMenu = document.querySelector('.filter-menu');
+  const bodyLock = document.querySelector('body');
+  const sideMenuClose = document.querySelector(".filter-menu__close-btn");
 
-  //Mobile Menu
-  const burger = document.querySelector('.top-filter__btn', ); //наша кнопка
-  const mobileMenu = document.querySelector('.filter-menu'); //мобильное меню
-  const bodyLock = document.querySelector('body'); //ищем как селектор ТЕГА
-  // const burgerClose = document.querySelector(".filter-menu__close-btn");
-  burger.addEventListener("click", () => {
-    mobileMenu.classList.add("filter-menu--active");
-    if (mobileMenu.classList.contains("filter-menu--active")) {
-      bodyLock.classList.add("lock");
-    }
+  mobileBurger.addEventListener("click", () => {
+    sideMenu.classList.add("filter-menu--active");
+    bodyLock.classList.add("new-lock");
   });
 
-  burgerClose.addEventListener("click", () => {
-    mobileMenu.classList.remove("filter-menu--active");
-    bodyLock.classList.remove("lock");
-  });
+    sideMenuClose.addEventListener("click", () => {
+      sideMenu.classList.remove("filter-menu--active");
+      bodyLock.classList.remove("new-lock");
+    });
 
-  document.addEventListener("click", function (e) {
-    if (e.target !== burger && e.target !== mobileMenu) {
-      mobileMenu.classList.remove("filter-menu--active");
-      bodyLock.classList.remove("lock");
-    }
-  });
-
-  mobileMenu.addEventListener("click", function (e) {
-    e.stopPropagation();
-  });
 });
-
-
-
-
-
-
-
-
-
-
-
 
 
 $(window).on('load resize', function () {
