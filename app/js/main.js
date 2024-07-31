@@ -219,4 +219,15 @@ $(function () {
   });
 });
 
+$('.product-section__img').slick({
+  // dots: true,
+  // focusOnSelect: true,
+  arrows: true,
+  infinite: false,
+  // appendDots: '.product-section__img-dots',
+  appendArrows: '.product-section__slider-navigation',
+  nextArrow: '<button type="button" class="slider-navigation__arrow slider-navigation__arrow--prev"><svg class="slider-arrow__arrow-left" fill="#000"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg></button>',
+  prevArrow: '<button type="button" class="slider-navigation__arrow slider-navigation__arrow--next"><svg class="slider-arrow__arrow-right" fill="#000"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg></button>',
+});
+
 var mixer = mixitup('.popular-category__content');
