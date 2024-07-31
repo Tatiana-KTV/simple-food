@@ -2578,19 +2578,55 @@ body {
   }
 
   &__slider {
-    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: $white;
   }
 
   &__slider-navigation {
-      position: absolute;
-      top: 50%;
-      transform: translate(-50%);
+    position: relative;
   }
 
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
 
+  }
+
+  &__arrow--prev {
+
+    width: 60px;
+    height: 60px;
+        left: -580px;
+  }
+
+  &__arrow--next {
+        left: -30px;
+    width: 60px;
+    height: 60px;
+  }
+
+  &__arrow-left,
+  &__arrow-right {
+    width: 60px;
+    height: 60px;
+    fill: $dark-blue900;
+    // transform: rotate(180deg);
+  }
+
+  &__arrow-left {
+    transform: rotate(180deg);
+  }
 
   &__img {
     max-width: 610px;
+    height: 550px;
     width: 100%;
+  }
+
+  .slick-slide img {
+    display: block;
+    margin: 75px auto;
   }
 }
