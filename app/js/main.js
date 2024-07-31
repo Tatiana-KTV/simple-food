@@ -1,78 +1,78 @@
 $(function () {
 
-var $range = $(".price-slider__input"),
-  $inputFrom = $(".price-slider__input-from"),
-  $inputTo = $(".price-slider__input-to"),
-  instance,
-  min = 0,
-  max = 1200,
-  from = 0,
-  to = 0;
+  var $range = $(".price-slider__input"),
+    $inputFrom = $(".price-slider__input-from"),
+    $inputTo = $(".price-slider__input-to"),
+    instance,
+    min = 0,
+    max = 1200,
+    from = 0,
+    to = 0;
 
-$range.ionRangeSlider({
-  skin: "round",
-  type: "double",
-  min: min,
-  max: max,
-  from: 100,
-  to: 1000,
-  onStart: updateInputs,
-  onChange: updateInputs
-});
-instance = $range.data("ionRangeSlider");
+  $range.ionRangeSlider({
+    skin: "round",
+    type: "double",
+    min: min,
+    max: max,
+    from: 100,
+    to: 1000,
+    onStart: updateInputs,
+    onChange: updateInputs
+  });
+  instance = $range.data("ionRangeSlider");
 
-function updateInputs(data) {
-  from = data.from;
-  to = data.to;
+  function updateInputs(data) {
+    from = data.from;
+    to = data.to;
 
-  $inputFrom.prop("value", from);
-  $inputTo.prop("value", to);
-}
-
-$inputFrom.on("input", function () {
-  var val = $(this).prop("value");
-
-  if (val < min) {
-    val = min;
-  } else if (val > to) {
-    val = to;
+    $inputFrom.prop("value", from);
+    $inputTo.prop("value", to);
   }
 
-  instance.update({
-    from: val
+  $inputFrom.on("input", function () {
+    var val = $(this).prop("value");
+
+    if (val < min) {
+      val = min;
+    } else if (val > to) {
+      val = to;
+    }
+
+    instance.update({
+      from: val
+    });
   });
-});
 
-$inputTo.on("input", function () {
-  var val = $(this).prop("value");
+  $inputTo.on("input", function () {
+    var val = $(this).prop("value");
 
 
-  if (val < from) {
-    val = from;
-  } else if (val > max) {
-    val = max;
-  }
+    if (val < from) {
+      val = from;
+    } else if (val > max) {
+      val = max;
+    }
 
-  instance.update({
-    to: val
+    instance.update({
+      to: val
+    });
   });
-});
 
- 
+
   $('.select-style').styler(),
+$('.product-section__input').styler(),
 
 
-
-  $('.slider').slick({
-    dots: true,
-    focusOnSelect: true,
-    arrows: true,
-    infinite: false,
-    appendDots: '.slider-navigation__dots',
-    appendArrows: '.slider-navigation',
-    nextArrow: '<button type="button" class="slider-navigation__arrow slider-navigation__arrow--prev"><svg class="slider-arrow__arrow-left" fill="#000"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg></button>',
-    prevArrow: '<button type="button" class="slider-navigation__arrow slider-navigation__arrow--next"><svg class="slider-arrow__arrow-right" fill="#000"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg></button>',
-  });
+    $('.slider').slick({
+      dots: true,
+      focusOnSelect: true,
+      arrows: true,
+      infinite: false,
+      appendDots: '.slider-navigation__dots',
+      appendArrows: '.slider-navigation',
+      nextArrow: '<button type="button" class="slider-navigation__arrow slider-navigation__arrow--prev"><svg class="slider-arrow__arrow-left" fill="#000"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg></button>',
+      prevArrow: '<button type="button" class="slider-navigation__arrow slider-navigation__arrow--next"><svg class="slider-arrow__arrow-right" fill="#000"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg></button>',
+    });
 
   $('.menu__link, .logo').on('click', function (event) {
     // event.preventDefault();
@@ -159,10 +159,10 @@ document.addEventListener('DOMContentLoaded', () => {
     bodyLock.classList.add("new-lock");
   });
 
-    sideMenuClose.addEventListener("click", () => {
-      sideMenu.classList.remove("filter-menu--active");
-      bodyLock.classList.remove("new-lock");
-    });
+  sideMenuClose.addEventListener("click", () => {
+    sideMenu.classList.remove("filter-menu--active");
+    bodyLock.classList.remove("new-lock");
+  });
 
 });
 
@@ -193,6 +193,30 @@ $(window).on('load resize', function () {
   } else {
     $('.promo__list.slick-initialized').slick('unslick');
   }
+});
+
+$(function () {
+  $('.product-section__star').rateYo({
+    rating: 3.6,
+    starWidth: '16px',
+    spacing: '6px',
+    readOnly: true,
+    normalFill: '#C1C1C1',
+    ratedFill: '#FFB800',
+
+  });
+});
+
+$(function () {
+  $('.form-star').rateYo({
+    rating: 4,
+    starWidth: '16px',
+    spacing: '6px',
+    readOnly: false,
+    normalFill: '#C1C1C1',
+    ratedFill: '#FFB800',
+
+  });
 });
 
 var mixer = mixitup('.popular-category__content');
