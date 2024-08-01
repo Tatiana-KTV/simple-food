@@ -210,6 +210,21 @@ $(function () {
 });
 
 $(function () {
+
+  //
+  $('.review-content__client-star').rateYo({
+    rating: 4,
+    starWidth: '16px',
+    spacing: '6px',
+    readOnly: true,
+    normalFill: '#C1C1C1',
+    ratedFill: '#FFB800',
+
+  });
+});
+
+$(function () {
+
   $('.form-star').rateYo({
     rating: 4,
     starWidth: '16px',

@@ -2677,14 +2677,65 @@ body {
   &__content-txt--mb:not(:last-child) {
     margin-bottom: 10px;
   }
+
   &__bottom {
     width: 690px;
     margin: 0 auto;
   }
-&__subtitle {
-  font-size: 24px;
-  line-height: 120%;
-  letter-spacing: 0.03em;
-  text-align: left;
+
+  &__review-subtitle {
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-align: left;
+    margin-bottom: 30px;
+  }
 }
+
+.review-content {
+  &__head {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    margin-bottom: 60px;
+  }
+  
+  &__item:not(:last-child) {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e4e4e4;
+  }
+
+  &__client-info {
+    align-items: center;
+  }
+
+  &__client-pic {
+    margin-right: 25px;
+    width: 70px;
+    height: 70px;
+  }
+
+  &__client-name {
+    @extend %rubik-500;
+    font-size: 20px;
+    color: $lightgray;
+    margin-bottom: 10px;
+  }
+
+  &__comment-date {
+    font-size: 18px;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+    color: $lightgray;
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 1.5;
+    color: $lightgray;
+  }
 }
