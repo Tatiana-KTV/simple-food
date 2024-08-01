@@ -106,6 +106,8 @@ changeColor.addEventListener('mousedown', (e) => {
   activeClass.classList.add('active');
 });
 
+
+
 $(document).scroll(function (e) {
   $(window).scrollTop() > 60 ?
     $('.header__top').addClass('header-fixed') :
@@ -229,5 +231,21 @@ $('.product-section__img').slick({
   nextArrow: '<button type="button" class="product-section__arrow product-section__arrow--next"><svg class="product-section__arrow-left" fill="#000"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg></button>',
   prevArrow: '<button type="button" class="product-section__arrow product-section__arrow--prev"><svg class="product-section__arrow-right" fill="#000"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg></button>',
 });
+
+$('.product-section__tabs-item').on('click', function (e) {
+  e.preventDefault();
+  // $('.product-section__tabs-item').removeClass('active');
+  // $(this).addClass('active');
+
+  $('.product-section__tab-content').removeClass('product-section__tab-content--active');
+  $($(this).attr('href')).addClass('product-section__tab-content--active');
+});
+
+$('.product-section__tabs-item').on('click', function (e) {
+  e.preventDefault();
+  $('.product-section__tabs-item').removeClass('active');
+  $(this).addClass('active');
+});
+
 
 var mixer = mixitup('.popular-category__content');

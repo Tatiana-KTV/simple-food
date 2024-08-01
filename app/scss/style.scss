@@ -2401,6 +2401,7 @@ body {
 .product-section {
   &__top {
     justify-content: space-between;
+    margin-bottom: 60px;
   }
 
   &__title {
@@ -2459,7 +2460,7 @@ body {
     height: 16px;
     margin-right: 15px;
     fill: transparent;
-    stroke-width: 1.5;
+    stroke-width: 2;
     stroke: $white;
   }
 
@@ -2591,18 +2592,17 @@ body {
     position: absolute;
     top: 50%;
     transform: translate(-50%);
-
   }
 
   &__arrow--prev {
 
     width: 60px;
     height: 60px;
-        left: -580px;
+    left: -580px;
   }
 
   &__arrow--next {
-        left: -30px;
+    left: -30px;
     width: 60px;
     height: 60px;
   }
@@ -2612,7 +2612,6 @@ body {
     width: 60px;
     height: 60px;
     fill: $dark-blue900;
-    // transform: rotate(180deg);
   }
 
   &__arrow-left {
@@ -2629,4 +2628,63 @@ body {
     display: block;
     margin: 75px auto;
   }
+
+  &__tab-content {
+    display: none;
+
+    &.product-section__tab-content--active {
+      display: block;
+    }
+  }
+
+  &__tabs-head {
+    margin: 30px 0;
+  }
+
+  &__tabs-item {
+    font-size: 24px;
+    line-height: 150%;
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-right: 60px;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $orange-900;
+      }
+    }
+
+    &:active {
+      text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+      box-shadow: none;
+      color: $dark;
+    }
+  }
+
+  &__content-txt {
+    font-size: 20px;
+    line-height: 1.5;
+    opacity: 0.9;
+    margin-bottom: 20px;
+  }
+
+  &__content-txt--bold {
+    @extend %rubik-500;
+  }
+
+  &__content-txt--mb:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  &__bottom {
+    width: 690px;
+    margin: 0 auto;
+  }
+&__subtitle {
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: 0.03em;
+  text-align: left;
+}
 }
