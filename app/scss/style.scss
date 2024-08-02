@@ -2677,14 +2677,134 @@ body {
   &__content-txt--mb:not(:last-child) {
     margin-bottom: 10px;
   }
+
   &__bottom {
     width: 690px;
     margin: 0 auto;
   }
-&__subtitle {
-  font-size: 24px;
-  line-height: 120%;
-  letter-spacing: 0.03em;
-  text-align: left;
+
+  &__review-subtitle {
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-align: left;
+    margin-bottom: 30px;
+  }
 }
+
+.review-content {
+  &__head {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    margin-bottom: 60px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e4e4e4;
+  }
+
+  &__client-info {
+    align-items: center;
+  }
+
+  &__client-pic {
+    margin-right: 25px;
+    width: 70px;
+    height: 70px;
+  }
+
+  &__client-name {
+    @extend %rubik-500;
+    font-size: 20px;
+    color: $lightgray;
+    margin-bottom: 10px;
+  }
+
+  &__comment-date {
+    font-size: 18px;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+    color: $lightgray;
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 1.5;
+    color: $lightgray;
+  }
+}
+
+
+.rating__group {
+  position: relative;
+  // width: 10em;
+  // height: 2em;
+  width: 104px;
+  height: 16px;
+}
+
+
+.rating__star {
+  background-image: url('../images/sprite.svg#icon-star');
+  @include recolor(rgba(#C1C1C1, 0.3));
+
+  background-repeat: repeat-x;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+
+  height: 16px;
+
+
+  appearance: none;
+  background-size: contain ;
+
+  background-repeat: repeat-x;
+}
+
+
+.rating__star:hover {
+  background-image: url('../images/sprite.svg#icon-star');
+  @include recolor(#FFB800);
+}
+
+.rating__star:hover~.rating__star {
+  background-image: url('../images/sprite.svg#icon-star');
+  @include recolor(rgba(#C1C1C1, 0.3));
+}
+
+.rating__star:nth-of-type(1) {
+  z-index: 5;
+
+  width: 16px;
+}
+
+.rating__star:nth-of-type(2) {
+  z-index: 4;
+  // width: 4em;  width: 32px;
+}
+
+.rating__star:nth-of-type(3) {
+  z-index: 3;
+
+  width: 48px;
+}
+
+.rating__star:nth-of-type(4) {
+  z-index: 2;
+
+  width: 64px;
+}
+
+.rating__star:nth-of-type(5) {
+  z-index: 1;
+
+  width: 80px;
 }
