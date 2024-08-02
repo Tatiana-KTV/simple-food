@@ -2702,7 +2702,7 @@ body {
   &__list {
     margin-bottom: 60px;
   }
-  
+
   &__item:not(:last-child) {
     margin-bottom: 25px;
     padding-bottom: 20px;
@@ -2738,4 +2738,73 @@ body {
     line-height: 1.5;
     color: $lightgray;
   }
+}
+
+
+.rating__group {
+  position: relative;
+  // width: 10em;
+  // height: 2em;
+  width: 104px;
+  height: 16px;
+}
+
+
+.rating__star {
+  background-image: url('../images/sprite.svg#icon-star');
+  @include recolor(rgba(#C1C1C1, 0.3));
+
+  background-repeat: repeat-x;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+
+  height: 16px;
+
+
+  appearance: none;
+  background-size: contain ;
+
+  background-repeat: repeat-x;
+}
+
+
+.rating__star:hover {
+  background-image: url('../images/sprite.svg#icon-star');
+  @include recolor(#FFB800);
+}
+
+.rating__star:hover~.rating__star {
+  background-image: url('../images/sprite.svg#icon-star');
+  @include recolor(rgba(#C1C1C1, 0.3));
+}
+
+.rating__star:nth-of-type(1) {
+  z-index: 5;
+
+  width: 16px;
+}
+
+.rating__star:nth-of-type(2) {
+  z-index: 4;
+  // width: 4em;  width: 32px;
+}
+
+.rating__star:nth-of-type(3) {
+  z-index: 3;
+
+  width: 48px;
+}
+
+.rating__star:nth-of-type(4) {
+  z-index: 2;
+
+  width: 64px;
+}
+
+.rating__star:nth-of-type(5) {
+  z-index: 1;
+
+  width: 80px;
 }
