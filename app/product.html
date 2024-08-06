@@ -182,7 +182,7 @@
           <div class="container">
             <div class="product-section__top d-flex">
 
-              <div class="product-section__slider">
+               <div class="product-section__slider">
                 <div class="product-section__img">
                   <div class="product-section__slick-img">
                     <img src="images/product/1.jpg" alt="фото бургера" width="400" height="400">
@@ -196,7 +196,7 @@
 
                 </div>
                 <div class="product-section__slider-navigation"></div>
-              </div>
+              </div> 
 
               <div class="product-section__description">
                 <h1 class="product-section__title title">Чизбургер с листьями салата</h1>
@@ -230,13 +230,13 @@
             <div class="product-section__bottom">
               <div class="product-section__tabs">
                 <div class="product-section__tabs-head">
-                  <a class="product-section__tabs-item " href="#tab-description">Описание</a>
+                  <a class="product-section__tabs-item active" href="#tab-description">Описание</a>
                   <a class="product-section__tabs-item " href="#tab-caracteristics">Характеристики</a>
-                  <a class="product-section__tabs-item active" href="#tab-review">Отзывы (2)</a>
+                  <a class="product-section__tabs-item " href="#tab-review">Отзывы (2)</a>
                 </div>
 
                 <div class="product-section__tabs-content">
-                  <div class="product-section__tab-content" id="tab-description">
+                  <div class="product-section__tab-content product-section__tab-content--active" id="tab-description">
                     <p class="product-section__content-txt">
                       Рубленый бифштекс из натуральной говядины на карамелизованной булочке, с ломтиком сыра «Чеддер»,
                       кетчупом, горчицей, луком и маринованными огурчиками.
@@ -260,9 +260,8 @@
                     <p class="product-section__content-txt product-section__content-txt--mb">
                       <span class="product-section__content-txt--bold">Срок хранения:</span> до 3 дней
                     </p>
-
                   </div>
-                  <div class="product-section__tab-content product-section__tab-content--active review-content"
+                  <div class="product-section__tab-content review-content"
                     id="tab-review">
                     <h3 class="product-section__review-subtitle title">Мнения наших клиентов</h3>
                     <ul class="review-content__list">
@@ -332,9 +331,9 @@
                       </div>
                       <div class="product-section__client-review d-flex">
                         <div class="product-section__client-message d-flex">
-                        <label class="product-section__message-label" for="client-review">Ваш отзыв *</label>
-                        <textarea class="product-section__client-text" id="client-review"
-                          placeholder="Введите текст отзыва" required></textarea>
+                          <label class="product-section__message-label" for="client-review">Ваш отзыв *</label>
+                          <textarea class="product-section__client-text" id="client-review"
+                            placeholder="Введите текст отзыва" required></textarea>
 
                         </div>
                         <div class="product-section__client-info">
@@ -350,7 +349,6 @@
                           </div>
                         </div>
                       </div>
-                      
                       <div class="product-section__remember">
                         <input class="product-section__input-save" type="checkbox" name="save-name" id="save-name">
                         <label class="product-section__label-save" for="save-name">Сохранить моё имя, email и адрес
@@ -358,17 +356,151 @@
                           в этом браузере для последующих моих
                           комментариев.</label>
                       </div>
-                      
-
-
-
-<button type="submit">send</button>
-
+                      <button class="product-section__form-btn animation-btn" type="submit">Оставить отзыв</button>
                     </form>
                   </div>
                 </div>
 
               </div>
+              
+            </div>
+            <div class="product-section__recent recent">
+              <h3 class="recent__title title">Вас может заинтересовать</h3>
+              <div class="recent__slider-arrows"></div>
+              <ul class="recent__slider">
+                <li class="recent__item">
+                  <article class="product-card">
+                    <img class="product-card__item-img" src="images/popular/1.png" width="140" height="140"
+                      alt="фото Чизбургер с листьями салата">
+                    <h3 class="product-card__item-title">Чизбургер с листьями салата</h3>
+                    <span class="product-card__item-info">
+                      <span class="product-card__item-price">160</span>
+                      <span class="product-card__item-currency">грн.</span>
+                    </span>
+                    <button class="product-card__item-btn animation-btn" type="button">В корзину</button>
+                  </article>
+                </li>
+
+                <li class="recent__item">
+                  <article class="product-card">
+                    <img class="product-card__item-img" src="images/popular/1.png" width="140" height="140"
+                      alt="фото Чизбургер с листьями салата">
+                    <h3 class="product-card__item-title">Чизбургер с листьями салата</h3>
+                    <span class="product-card__item-info">
+                      <span class="product-card__item-price">160</span>
+                      <span class="product-card__item-currency">грн.</span>
+                    </span>
+                    <button class="product-card__item-btn animation-btn" type="button">В корзину</button>
+                  </article>
+                </li>
+
+                <li class="recent__item">
+                  <article class="product-card">
+                    <img class="product-card__item-img" src="images/popular/1.png" width="140" height="140"
+                      alt="фото Чизбургер с листьями салата">
+                    <h3 class="product-card__item-title">Чизбургер с листьями салата</h3>
+                    <span class="product-card__item-info">
+                      <span class="product-card__item-price">160</span>
+                      <span class="product-card__item-currency">грн.</span>
+                    </span>
+                    <button class="product-card__item-btn animation-btn" type="button">В корзину</button>
+                  </article>
+                </li>
+
+                <li class="recent__item">
+                  <article class="product-card">
+                    <img class="product-card__item-img" src="images/popular/1.png" width="140" height="140"
+                      alt="фото Чизбургер с листьями салата">
+                    <h3 class="product-card__item-title">Чизбургер с листьями салата</h3>
+                    <span class="product-card__item-info">
+                      <span class="product-card__item-price">160</span>
+                      <span class="product-card__item-currency">грн.</span>
+                    </span>
+                    <button class="product-card__item-btn animation-btn" type="button">В корзину</button>
+                  </article>
+                </li>
+
+                <li class="recent__item">
+                  <article class="product-card">
+                    <img class="product-card__item-img" src="images/popular/1.png" width="140" height="140"
+                      alt="фото Чизбургер с листьями салата">
+                    <h3 class="product-card__item-title">Чизбургер с листьями салата</h3>
+                    <span class="product-card__item-info">
+                      <span class="product-card__item-price">160</span>
+                      <span class="product-card__item-currency">грн.</span>
+                    </span>
+                    <button class="product-card__item-btn animation-btn" type="button">В корзину</button>
+                  </article>
+                </li>
+
+                <li class="recent__item">
+                  <article class="product-card">
+                    <img class="product-card__item-img" src="images/popular/1.png" width="140" height="140"
+                      alt="фото Чизбургер с листьями салата">
+                    <h3 class="product-card__item-title">Чизбургер с листьями салата</h3>
+                    <span class="product-card__item-info">
+                      <span class="product-card__item-price">160</span>
+                      <span class="product-card__item-currency">грн.</span>
+                    </span>
+                    <button class="product-card__item-btn animation-btn" type="button">В корзину</button>
+                  </article>
+                </li>
+
+                <li class="recent__item">
+                  <article class="product-card">
+                    <img class="product-card__item-img" src="images/popular/1.png" width="140" height="140"
+                      alt="фото Чизбургер с листьями салата">
+                    <h3 class="product-card__item-title">Чизбургер с листьями салата</h3>
+                    <span class="product-card__item-info">
+                      <span class="product-card__item-price">160</span>
+                      <span class="product-card__item-currency">грн.</span>
+                    </span>
+                    <button class="product-card__item-btn animation-btn" type="button">В корзину</button>
+                  </article>
+                </li>
+
+                <li class="recent__item">
+                  <article class="product-card">
+                    <img class="product-card__item-img" src="images/popular/1.png" width="140" height="140"
+                      alt="фото Чизбургер с листьями салата">
+                    <h3 class="product-card__item-title">Чизбургер с листьями салата</h3>
+                    <span class="product-card__item-info">
+                      <span class="product-card__item-price">160</span>
+                      <span class="product-card__item-currency">грн.</span>
+                    </span>
+                    <button class="product-card__item-btn animation-btn" type="button">В корзину</button>
+                  </article>
+                </li>
+
+                <li class="recent__item">
+                  <article class="product-card">
+                    <img class="product-card__item-img" src="images/popular/1.png" width="140" height="140"
+                      alt="фото Чизбургер с листьями салата">
+                    <h3 class="product-card__item-title">Чизбургер с листьями салата</h3>
+                    <span class="product-card__item-info">
+                      <span class="product-card__item-price">160</span>
+                      <span class="product-card__item-currency">грн.</span>
+                    </span>
+                    <button class="product-card__item-btn animation-btn" type="button">В корзину</button>
+                  </article>
+                </li>
+
+                <li class="recent__item">
+                  <article class="product-card">
+                    <img class="product-card__item-img" src="images/popular/1.png" width="140" height="140"
+                      alt="фото Чизбургер с листьями салата">
+                    <h3 class="product-card__item-title">Чизбургер с листьями салата</h3>
+                    <span class="product-card__item-info">
+                      <span class="product-card__item-price">160</span>
+                      <span class="product-card__item-currency">грн.</span>
+                    </span>
+                    <button class="product-card__item-btn animation-btn" type="button">В корзину</button>
+                  </article>
+                </li>
+
+
+              </ul>
+              <div class="recent__slider-dots"></div>
             </div>
           </div>
 
@@ -378,7 +510,6 @@
 
 
         </section>
-
 
 
 

@@ -262,5 +262,15 @@ $('.product-section__tabs-item').on('click', function (e) {
   $(this).addClass('active');
 });
 
+$('.recent__slider').slick({
+  dots: true,
+  arrows: true,
+  slidesToShow: 5,
 
+  appendDots: '.recent__slider-dots',
+  appendArrows: '.recent__slider-arrows',
+  // nextArrow: '<button type="button" class="recent__slider-arrows recent__slider-arrows--next"><svg class="slider-arrow__arrow-left" fill="#000"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg></button>',
+  prevArrow: '<button type="button" class="recent__slider-arrows recent__slider-arrows--prev"><svg class="slider-arrow__arrow-right" fill="#000"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg></button>',
+  nextArrow: '<button type="button" class="recent__slider-arrows recent__slider-arrows--next"><svg class="slider-arrow__arrow-left" fill="#000"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg></button>',
+    });
 var mixer = mixitup('.popular-category__content');
