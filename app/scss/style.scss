@@ -836,7 +836,6 @@ body {
         }
 
         &.slick-active {
-
           button,
           .slick-active__arrow {
             background-color: $orange-700;
@@ -844,7 +843,6 @@ body {
         }
       }
     }
-
   }
 }
 
@@ -2273,6 +2271,7 @@ body {
   }
 }
 
+
 .promo-card {
   border-radius: 10px;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
@@ -2845,6 +2844,7 @@ body {
     height: 57px;
     padding: 18px;
     margin-top: 15px;
+    background-color: $white;
 
     &:focus {
       border: 1px solid $dark-blue900;
@@ -2930,6 +2930,25 @@ body {
   }
 }
 
+.slick-disabled {
+  svg {
+    fill: $orange-900;
+    stroke: $orange-900;
+  }
+}
+.slider-navigation {
+  &__arrow {
+    transition: fill 0.3s, stroke 0.3s;
+      @media (any-hover: hover) {
+        &:hover {
+          svg {
+            fill: $orange-900;
+            stroke: $orange-900;
+          }
+        }
+      }
+  }
+}
 .review-content {
   &__head {
     justify-content: space-between;
@@ -2980,15 +2999,41 @@ body {
 }
 
 .recent {
+  &__top {
+    position: relative;
+  }
 
+  display: flex;
+  flex-direction: column;
   padding: 60px 0;
+
   &__title {
     text-align: left;
     margin-bottom: 60px;
   }
+
+  &__slider {
+    padding: 2px 0;
+  }
+
   &__item {
     margin: 0 15px;
-    padding: 2px 0;
+    padding: 1px 0;
+  }
+
+  &__slider-arrow {
+    position: absolute;
+    top: 25%;
+    transform: translate(-50%);
+    right: 0;
+  }
+
+  &__slider-arrows--next {
+    margin-left: 25px;
+  }
+
+  &__slider-dots {
+    margin: 0 auto;
   }
 }
 

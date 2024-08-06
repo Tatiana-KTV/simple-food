@@ -263,13 +263,42 @@ $('.product-section__tabs-item').on('click', function (e) {
 });
 
 $('.recent__slider').slick({
-  dots: true,
+  dots: false,
   arrows: true,
   slidesToShow: 5,
-
+  infinite: false,
+   responsive: [{
+       breakpoint: 992,
+       settings: {
+         slidesToShow: 4,
+         slidesToScroll: 3,
+         dots: true,
+         arrows: false,
+       }
+     },
+     {
+       breakpoint: 768,
+       settings: {
+         slidesToShow: 3,
+         slidesToScroll: 2,
+         dots: true,
+         arrows: false,
+       }
+     },
+     {
+       breakpoint: 560,
+       settings: {
+         slidesToShow: 2,
+         dots: true,
+         arrows: false,
+       }
+     },
+     
+   ],
+//768px
+//560px
   appendDots: '.recent__slider-dots',
-  appendArrows: '.recent__slider-arrows',
-  // nextArrow: '<button type="button" class="recent__slider-arrows recent__slider-arrows--next"><svg class="slider-arrow__arrow-left" fill="#000"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg></button>',
+  appendArrows: '.recent__slider-arrow',
   prevArrow: '<button type="button" class="recent__slider-arrows recent__slider-arrows--prev"><svg class="slider-arrow__arrow-right" fill="#000"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg></button>',
   nextArrow: '<button type="button" class="recent__slider-arrows recent__slider-arrows--next"><svg class="slider-arrow__arrow-left" fill="#000"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg></button>',
     });
