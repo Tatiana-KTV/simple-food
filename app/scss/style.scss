@@ -940,6 +940,19 @@ body {
 .testimonials {
   &__title {
     margin-bottom: 45px;
+          @include mq('tablet-2') {
+            font-size: 36px;
+          }
+
+          @include mq('tablet') {
+            font-size: 30px;
+            margin-bottom: 30px;
+          }
+
+          @include mq('phone') {
+            font-size: 24px;
+            margin-bottom: 30px;
+          }
   }
 }
 
@@ -948,12 +961,30 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include mq('tablet') {
+      flex-direction: column;
+    }
   }
 
   &__img {
     width: 300px;
     height: 300px;
     border-radius: 50%;
+      @include mq('tablet-2') {
+
+      }
+
+      @include mq('tablet') {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 30px;
+      }
+
+      @include mq('phone') {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+      }
   }
 
   &__blockquote {
@@ -965,6 +996,17 @@ body {
     position: relative;
     font-size: 20px;
     line-height: 1.5;
+      @include mq('tablet-2') {
+        font-size: 18px;
+      }
+
+      @include mq('tablet') {
+        font-size: 16px;
+      }
+
+      @include mq('phone') {
+        font-size: 14px;
+      }
 
     &::before,
     &::after {
@@ -1166,24 +1208,40 @@ body {
 
   @include mq('tablet') {
     padding-bottom: 30px;
+      flex-direction: column;
+
+      &__first {
+        order: 1;
+        margin-bottom: 15px;
+      }
+
+      &__second {
+        order: 2;
+        margin-bottom: 15px;
+      }
+
+      &__third {
+        order: 3
+      }
+    
   }
 
-  @include mq('phone') {
-    padding-bottom: 20px;
-    flex-direction: column;
+  // @include mq('phone') {
+  //   padding-bottom: 20px;
+  //   flex-direction: column;
 
-    &__first {
-      order: 1;
-    }
+  //   &__first {
+  //     order: 1;
+  //   }
 
-    &__second {
-      order: 2;
-    }
+  //   &__second {
+  //     order: 2;
+  //   }
 
-    &__third {
-      order: 3
-    }
-  }
+  //   &__third {
+  //     order: 3
+  //   }
+  // }
 }
 
 .footer-content {
