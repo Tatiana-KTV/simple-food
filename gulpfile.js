@@ -1,14 +1,14 @@
 const { src, dest, watch, parallel, series } = require('gulp');
-const scss = require('gulp-sass')(require('sass'));
-const concat = require('gulp-concat');
-const autoprefixer = require('gulp-autoprefixer');
-const uglify = require('gulp-uglify');
-const imagemin = require('gulp-imagemin');
-const svgSprite = require('gulp-svg-sprite');
-const replace = require('gulp-replace');
-const cheerio = require('gulp-cheerio');
-const del = require('del');
-const browserSync = require('browser-sync').create();
+const scss            = require('gulp-sass')(require('sass'));
+const concat          = require('gulp-concat');
+const autoprefixer    = require('gulp-autoprefixer');
+const uglify          = require('gulp-uglify');
+const imagemin        = require('gulp-imagemin');
+const svgSprite       = require('gulp-svg-sprite');
+const replace         = require('gulp-replace');
+const cheerio         = require('gulp-cheerio');
+const del             = require('del');
+const browserSync     = require('browser-sync').create();
 
 function browsersync() {
   browserSync.init({
@@ -66,6 +66,7 @@ function scripts() {
     'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
     'node_modules/rateyo/src/jquery.rateyo.js',
     'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
+    'node_modules/@fancyapps/ui/dist/fancybox.umd.js',
     'app/js/main.js',
   ])
     .pipe(concat('main.min.js'))
