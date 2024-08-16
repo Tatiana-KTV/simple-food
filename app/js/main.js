@@ -272,13 +272,13 @@ $(function () {
   
 // });
 
-$('.product-section__img').slick({
-  arrows: true,
-  infinite: false,
-  appendArrows: '.product-section__slider-navigation',
-  nextArrow: '<button type="button" class="product-section__arrow product-section__arrow--next"><svg class="product-section__arrow-left" fill="#000"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg></button>',
-  prevArrow: '<button type="button" class="product-section__arrow product-section__arrow--prev"><svg class="product-section__arrow-right" fill="#000"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg></button>',
-});
+// $('.product-section__img').slick({
+//   arrows: true,
+//   infinite: false,
+//   appendArrows: '.product-section__slider-navigation',
+//   nextArrow: '<button type="button" class="product-section__arrow product-section__arrow--next"><svg class="product-section__arrow-left" fill="#000"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg></button>',
+//   prevArrow: '<button type="button" class="product-section__arrow product-section__arrow--prev"><svg class="product-section__arrow-right" fill="#000"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg></button>',
+// });
 
 $('.product-section__tabs-item').on('click', function (e) {
   e.preventDefault();
@@ -334,5 +334,31 @@ $('.recent__slider').slick({
   prevArrow: '<button type="button" class="recent__slider-arrows recent__slider-arrows--prev"><svg class="slider-arrow__arrow-right" fill="#000"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg></button>',
   nextArrow: '<button type="button" class="recent__slider-arrows recent__slider-arrows--next"><svg class="slider-arrow__arrow-left" fill="#000"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg></button>',
 });
+
+
+const myCarousel = new Carousel(document.querySelector('#myCarousel'), {
+  // preload: 2,
+  Dots: false,
+});
+
+Fancybox.bind('[data-fancybox="gallery"]', {
+  Thumbs: false,
+  Toolbar: false,
+
+  closeButton: "top",
+  Carousel: {
+    Dots: true,
+    on: {
+      change: (that) => {
+        myCarousel.slideTo(myCarousel.findPageForSlide(that.page), {
+          friction: 0,
+        });
+      },
+    },
+  },
+});
+
+
+
 
 var mixer = mixitup('.popular-category__content');
