@@ -2562,12 +2562,14 @@ body {
 .wide {
   border-bottom: 1px solid $silver-200;
 }
+
 .jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group {
-   z-index: 0;
+  z-index: 0;
 }
+
 .jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group.jq-ry-rated-group {
 
-   z-index: 0; 
+  z-index: 0;
 
 }
 
@@ -2575,6 +2577,7 @@ body {
   &__top {
     justify-content: space-between;
     margin-bottom: 60px;
+
     @include mq('tablet-2') {
       margin-bottom: 50px;
     }
@@ -2582,14 +2585,15 @@ body {
 
   &__title {
     margin-bottom: 30px;
+
     @include mq('desktop') {
       margin-bottom: 25px;
       font-size: 32px;
     }
 
     @include mq('tablet-2') {
-margin-bottom: 20px;
-font-size: 29px;
+      margin-bottom: 20px;
+      font-size: 29px;
     }
 
     @include mq('tablet') {}
@@ -2599,6 +2603,7 @@ font-size: 29px;
 
   &__star {
     margin-bottom: 25px;
+
     @include mq('desktop') {
       margin-bottom: 20px;
     }
@@ -2610,6 +2615,7 @@ font-size: 29px;
     font-size: 25px;
     line-height: 1.4;
     margin-bottom: 20px;
+
     @include mq('desktop') {
       font-size: 23px;
     }
@@ -2617,13 +2623,24 @@ font-size: 29px;
 
   &__form {
     margin-bottom: 30px;
+
     @include mq('desktop') {
       margin-bottom: 25px;
+    }
+
+    @include mq('tablet-2') {
+      flex-direction: column;
     }
   }
 
   &__input {
     margin-right: 20px;
+
+    @include mq('tablet-2') {
+      margin-right: 0;
+      margin-bottom: 15px;
+      max-width: 158px;
+    }
   }
 
   &__btn {
@@ -2637,6 +2654,10 @@ font-size: 29px;
     text-align: center;
     cursor: pointer;
     transition: color 0.3s, background-color 0.3s, stroke 0.3s;
+
+    @include mq('tablet-2') {
+      width: 247px;
+    }
 
     @media (any-hover: hover) {
       &:hover {
@@ -2669,6 +2690,7 @@ font-size: 29px;
     letter-spacing: 0.03em;
     color: $dark-blue900;
     position: relative;
+
     @include mq('desktop') {
       margin-bottom: 30px;
       font-size: 22px;
@@ -2710,8 +2732,14 @@ font-size: 29px;
     border: none;
     border-radius: 3px;
     box-shadow: none;
+
     @include mq('desktop') {
-          width: 140px;
+      width: 140px;
+    }
+
+    @include mq('tablet-2') {
+      width: 158px;
+      height: 44px;
     }
   }
 
@@ -2732,6 +2760,10 @@ font-size: 29px;
     text-align: center;
     color: $dark-blue900;
     background-color: rgba($orange-700, 0.1);
+
+    @include mq('tablet-2') {
+      width: 158px;
+    }
   }
 
   .jq-number {
@@ -2753,7 +2785,12 @@ font-size: 29px;
     text-shadow: none;
     background-color: $orange-900;
     cursor: pointer;
-    &:hover{
+
+    @include mq('tablet-2') {
+      top: 22px;
+    }
+
+    &:hover {
       opacity: 0.7;
     }
   }
@@ -2860,13 +2897,17 @@ font-size: 29px;
 
   &__tabs-head {
     margin: 30px 0;
+    overflow: auto;
+
     @include mq('desktop') {
       margin: 26px 0;
     }
 
     @include mq('tablet-2') {}
 
-    @include mq('tablet') {}
+    @include mq('tablet') {
+          
+    }
 
     @include mq('phone') {}
   }
@@ -2878,19 +2919,25 @@ font-size: 29px;
 
     &:not(:last-child) {
       margin-right: 60px;
+
       @include mq('desktop') {
         margin-right: 55px;
       }
     }
+
     @include mq('desktop') {
       font-size: 22px;
     }
 
     @include mq('tablet-2') {}
 
-    @include mq('tablet') {}
+    @include mq('tablet') {
 
-    @include mq('phone') {}
+    }
+
+    @include mq('phone') {
+      font-size: 20px;
+    }
 
     @media (any-hover: hover) {
       &:hover {
@@ -2910,9 +2957,20 @@ font-size: 29px;
     line-height: 1.5;
     opacity: 0.9;
     margin-bottom: 20px;
+
     @include mq('desktop') {
       margin-bottom: 15px;
     }
+
+    @include mq('tablet-2') {
+      font-size: 18px;
+    }
+
+    @include mq('tablet') {
+      font-size: 16px;
+    }
+
+
   }
 
   &__content-txt--bold {
@@ -3195,16 +3253,12 @@ font-size: 29px;
   }
 
   .slick-initialized .slick-slide {
-    /* display: block; */
     display: flex;
     justify-content: center;
     align-items: center;
   }
 }
 
-// .slick-track {
-//   display: flex;
-// }
 
 .slick-disabled {
   svg {
@@ -3305,10 +3359,30 @@ font-size: 29px;
   &__title {
     text-align: left;
     margin-bottom: 60px;
+
+    @include mq('tablet-2') {
+      margin-bottom: 50px;
+      font-size: 30px;
+    }
+
+    @include mq('tablet') {
+      margin-bottom: 40px;
+      font-size: 24px;
+    }
+
+    @include mq('phone') {
+      margin-bottom: 30px;
+      font-size: 20px;
+    }
   }
 
   &__slider {
     padding: 2px 0;
+  }
+
+  &__slider.slick-slider {
+    padding: 0;
+    margin-bottom: 30px;
   }
 
   &__item {
@@ -3344,16 +3418,27 @@ font-size: 29px;
   display: flex;
   justify-content: center;
   align-items: center;
+
   @include mq('desktop') {
     max-width: 500px;
     height: 540px;
     margin-right: 10px;
   }
-  
+
+  @include mq('tablet-2') {
+    max-width: 360px;
+    height: 400px;
+  }
+
+
+  &__img {
+    @include mq('tablet-2') {
+      width: 300px;
+      height: 300px;
+    }
+  }
 
   &__slide {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     width: var(--carousel-slide-width, 100%);
     max-width: 100%;
@@ -3361,7 +3446,6 @@ font-size: 29px;
     position: relative;
     overflow-x: hidden;
     overflow-y: auto;
-    -ms-scroll-chaining: none;
     overscroll-behavior: contain;
 
     @include mq('desktop') {
@@ -3369,16 +3453,12 @@ font-size: 29px;
     }
 
     @include mq('tablet-2') {
-      
+      padding: 30px 60px;
     }
 
-    @include mq('tablet') {
-      
-    }
+    @include mq('tablet') {}
 
-    @include mq('phone') {
-      
-    }
+    @include mq('phone') {}
   }
 }
 
