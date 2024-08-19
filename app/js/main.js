@@ -183,7 +183,7 @@ bodyLock.classList.add("new-lock");
 
 
   // document.addEventListener("click", function (e) {
-  //   if (e.target !== mobileBurger && e.target !== sideMenu) {
+  //   if (e.target !== sideMenuClose && e.target !== sideMenu) {
   //     sideMenu.classList.remove("filter-menu--active");
   //     bodyLock.classList.remove("new-lock");
   //   }
@@ -322,6 +322,7 @@ $('.recent__slider').slick({
        breakpoint: 560,
        settings: {
          slidesToShow: 2,
+         slidesToScroll: 5,
          dots: true,
          arrows: false,
        }
@@ -337,7 +338,6 @@ $('.recent__slider').slick({
 
 
 const myCarousel = new Carousel(document.querySelector('#myCarousel'), {
-  // preload: 2,
   Dots: false,
 });
 
