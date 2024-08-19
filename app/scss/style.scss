@@ -2722,7 +2722,6 @@ body {
 
   .jq-number__field {
     width: 158px;
-
     border: none;
     border-radius: 3px;
     box-shadow: none;
@@ -2876,8 +2875,6 @@ body {
   }
 
   &__slick-img {
-    // display: flex;
-    // justify-content: center;
     margin: 0 auto;
   }
 
@@ -2891,7 +2888,7 @@ body {
 
   &__tabs-head {
     margin: 30px 0;
-    overflow-y: auto;
+    overflow: auto;
 
     @include mq('desktop') {}
 
@@ -3087,6 +3084,10 @@ body {
   &__client-review {
     justify-content: space-between;
     margin-bottom: 30px;
+    @include mq('tablet') {
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
   }
 
   &__message-label,
@@ -3097,8 +3098,12 @@ body {
     color: $lightgray;
   }
 
+
   &__client-message {
     flex-direction: column;
+    @include mq('tablet') {
+      margin-bottom: 20px;
+    }
   }
 
   &__client-text {
@@ -3130,6 +3135,9 @@ body {
         color: $dark-blue900;
       }
     }
+    @include mq('tablet') {
+      width: 345px;
+    }
   }
 
   &__client-name {
@@ -3159,10 +3167,19 @@ body {
         color: $dark-blue900;
       }
     }
+    @include mq('tablet') {
+      margin-top: 0;
+      width: 345px;
+    }
   }
 
   &__client-data {
     margin-bottom: 10px;
+    @include mq('tablet') {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
   }
 
   &__client-mail {
@@ -3192,6 +3209,12 @@ body {
         color: $dark-blue900;
       }
     }
+
+        @include mq('tablet') {
+          margin-top: 0;
+          width: 345px;
+        }
+      
   }
 
   &__input-save {
@@ -3255,6 +3278,9 @@ body {
   &__remember {
     position: relative;
     margin-bottom: 30px;
+    @include mq ('tablet') {
+      width: 345px;
+    }
   }
 
   &__form-btn {
