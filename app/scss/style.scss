@@ -7,7 +7,6 @@
 
 
 body {
-  // width: 100vw;
   height: 100%;
 
   &.lock,
@@ -26,7 +25,6 @@ body {
     }
   }
 }
-
 
 .logo {
   border-radius: 5px;
@@ -627,8 +625,6 @@ body {
   }
 }
 
-
-
 .features {
   &__cont {
     max-width: 1030px;
@@ -762,9 +758,6 @@ body {
   }
 }
 
-
-
-
 .restorant {
   &__title {
     margin-bottom: 45px;
@@ -815,7 +808,6 @@ body {
       width: 100%;
     }
   }
-
 
   .slick-dots {
     @include mq('tablet') {
@@ -944,7 +936,6 @@ body {
   }
 }
 
-
 .testimonials {
   &__title {
     margin-bottom: 45px;
@@ -986,8 +977,6 @@ body {
     height: 300px;
     border-radius: 50%;
     position: relative;
-
-    @include mq('tablet-2') {}
 
     @include mq('tablet') {
       width: 200px;
@@ -1226,8 +1215,6 @@ body {
 
 }
 
-
-
 .footer {
   padding-top: 60px;
 
@@ -1399,7 +1386,6 @@ body {
 }
 
 .contacts {
-
   &__detail {
     align-items: center;
     margin-bottom: 10px;
@@ -1433,7 +1419,6 @@ body {
 }
 
 .social {
-
   &__item:not(:last-child) {
     margin-right: 13px;
   }
@@ -1512,7 +1497,6 @@ body {
     fill: $gray;
     cursor: pointer;
   }
-
 }
 
 .mobile-menu {
@@ -1569,7 +1553,6 @@ body {
         color: $white;
         background-color: $orange-900;
       }
-
     }
 
     &:active {
@@ -1712,7 +1695,6 @@ body {
   }
 }
 
-
 .burger,
 .burger-new {
   display: none;
@@ -1843,7 +1825,6 @@ body {
         color: $orange-900;
       }
     }
-
   }
 
   &__elem {
@@ -1855,7 +1836,6 @@ body {
 }
 
 .catalog {
-
   &__title {
     @include mq('tablet') {
       font-size: 28px;
@@ -1902,7 +1882,6 @@ body {
   &__content {
     justify-content: space-between;
   }
-
 }
 
 .filter {
@@ -1935,7 +1914,6 @@ body {
   &__item-form {
     padding: 23px 15px 21px 12px;
   }
-
 }
 
 .top-filter {
@@ -1968,7 +1946,6 @@ body {
 }
 
 .form-offer {
-
   &__item {
     position: relative;
     padding-left: 35px;
@@ -1994,8 +1971,6 @@ body {
       }
     }
   }
-
-
 
   &__checkbox {
     position: absolute;
@@ -2465,7 +2440,6 @@ body {
     line-height: 1.3;
     letter-spacing: 0.03em;
   }
-
 }
 
 .price-slider {
@@ -2543,14 +2517,9 @@ body {
   border-bottom: 1px solid $silver-200;
 }
 
-.jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group {
-  z-index: 0;
-}
-
+.jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group,
 .jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group.jq-ry-rated-group {
-
   z-index: 0;
-
 }
 
 .product-section {
@@ -2687,16 +2656,6 @@ body {
       margin-bottom: 30px;
       font-size: 22px;
     }
-
-    @include mq('tablet-2') {}
-
-    @include mq('tablet') {}
-
-    @include mq('phone') {}
-
-
-
-
 
     &::after {
       position: absolute;
@@ -2889,14 +2848,6 @@ body {
   &__tabs-head {
     margin: 30px 0;
     overflow: auto;
-
-    @include mq('desktop') {}
-
-    @include mq('tablet-2') {}
-
-    @include mq('tablet') {}
-
-    @include mq('phone') {}
   }
 
   &__tabs-item {
@@ -2927,10 +2878,6 @@ body {
     @include mq('desktop') {
       font-size: 22px;
     }
-
-    @include mq('tablet-2') {}
-
-    @include mq('tablet') {}
 
     @include mq('phone') {
       font-size: 20px;
@@ -2966,8 +2913,6 @@ body {
     @include mq('tablet') {
       font-size: 16px;
     }
-
-
   }
 
   &__content-txt--bold {
@@ -2990,7 +2935,6 @@ body {
     @include mq('tablet') {
       padding-bottom: 35px;
     }
-
   }
 
   &__review-subtitle {
@@ -3003,62 +2947,68 @@ body {
     @include mq('phone') {
       font-size: 20px;
     }
-
   }
 
   &__rating-group {
     position: relative;
-    width: 104px;
-    height: 16px;
+    font-size: 25px;
+    display: inline-block;
+
   }
 
-  &__rating-star {
-    background-image: url('../images/sprite.svg#icon-star');
-    @include recolor(rgba(#C1C1C1, 0.3));
-    background-repeat: repeat-x;
+  &__rating-group::before {
+    content: '★★★★★';
+    // background-image: url('../images/icons/icon-star.svg');
+    // @include recolor(#C1C1C1);
+    // background-repeat: repeat-x;
+    height: 27px;
+    display: block;
+    width: 104px;
+  }
+
+  &__rating-items {
     position: absolute;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
-    margin: 0;
-    height: 16px;
-    appearance: none;
-    background-size: contain;
-    background-repeat: repeat-x;
+    display: flex;
+    flex-direction: row-reverse;
+    overflow: hidden;
   }
 
-  &__rating-star:hover {
-    background-image: url('../images/sprite.svg#icon-star');
-    @include recolor(#FFB800);
+  &__rating-item {
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    opacity: 0;
+    visibility: hidden;
+    top: 0;
+    left: 0;
   }
 
-  &__rating-star:hover~.rating__star {
-    background-image: url('../images/sprite.svg#icon-star');
-    @include recolor(rgba(#C1C1C1, 0.3));
+  &__rating-labels {
+    flex-direction: 0 0 20%;
+    height: 100%;
+    cursor: pointer;
+    color: $gray-2;
   }
 
-  &__rating-star:nth-of-type(1) {
-    z-index: 5;
-    width: 16px;
+  &__rating-labels::before {
+    content: '★';
+    display: block;
+    transition: color 0.3s;
   }
 
-  &__rating-star:nth-of-type(2) {
-    z-index: 4;
-    width: 32px;
+  &__rating-labels:hover,
+  &__rating-labels:hover~&__rating-labels,
+  &__rating-labels:checked~&__rating-labels:hover {
+    color: #FFB800;
   }
 
-  &__rating-star:nth-of-type(3) {
-    z-index: 3;
-    width: 48px;
-  }
-
-  &__rating-star:nth-of-type(4) {
-    z-index: 2;
-    width: 64px;
-  }
-
-  &__rating-star:nth-of-type(5) {
-    z-index: 1;
-    width: 80px;
+  &__rating-item:checked,
+  &__rating-item:checked~&__rating-labels {
+    color: #FFB800;
   }
 
   &__rating-title {
@@ -3084,6 +3034,7 @@ body {
   &__client-review {
     justify-content: space-between;
     margin-bottom: 30px;
+
     @include mq('tablet') {
       flex-direction: column;
       margin-bottom: 10px;
@@ -3098,9 +3049,9 @@ body {
     color: $lightgray;
   }
 
-
   &__client-message {
     flex-direction: column;
+
     @include mq('tablet') {
       margin-bottom: 20px;
     }
@@ -3126,7 +3077,7 @@ body {
     &::placeholder {
       font-size: 16px;
       line-height: 1.3;
-      color: #c1c1c1;
+      color: $gray-2;
       transition: color 0.3s;
     }
 
@@ -3135,6 +3086,7 @@ body {
         color: $dark-blue900;
       }
     }
+
     @include mq('tablet') {
       width: 345px;
     }
@@ -3158,7 +3110,7 @@ body {
     &::placeholder {
       font-size: 16px;
       line-height: 1.3;
-      color: #c1c1c1;
+      color: $gray-2;
       transition: color 0.3s;
     }
 
@@ -3167,6 +3119,7 @@ body {
         color: $dark-blue900;
       }
     }
+
     @include mq('tablet') {
       margin-top: 0;
       width: 345px;
@@ -3175,6 +3128,7 @@ body {
 
   &__client-data {
     margin-bottom: 10px;
+
     @include mq('tablet') {
       display: flex;
       flex-direction: column;
@@ -3200,7 +3154,7 @@ body {
     &::placeholder {
       font-size: 16px;
       line-height: 130%;
-      color: #c1c1c1;
+      color: $gray-2;
       transition: color 0.3s;
     }
 
@@ -3210,11 +3164,11 @@ body {
       }
     }
 
-        @include mq('tablet') {
-          margin-top: 0;
-          width: 345px;
-        }
-      
+    @include mq('tablet') {
+      margin-top: 0;
+      width: 345px;
+    }
+
   }
 
   &__input-save {
@@ -3250,7 +3204,7 @@ body {
     border-radius: 3px;
     width: 24px;
     height: 24px;
-    border: 1px solid #c1c1c1;
+    border: 1px solid $gray-2;
     margin-right: 10px;
     background-repeat: no-repeat;
     background-position: center center;
@@ -3278,6 +3232,7 @@ body {
   &__remember {
     position: relative;
     margin-bottom: 30px;
+
     @include mq ('tablet') {
       width: 345px;
     }
@@ -3298,7 +3253,6 @@ body {
     align-items: center;
   }
 }
-
 
 .slick-disabled {
   svg {
@@ -3406,7 +3360,6 @@ body {
       font-size: 16px;
     }
   }
-
 }
 
 .recent {
@@ -3492,7 +3445,7 @@ body {
   max-width: 550px;
   height: 610px;
   width: 100%;
-  background-color: #fff;
+  background-color: $white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3513,7 +3466,6 @@ body {
     width: 100%;
     margin: auto;
   }
-
 
   &__img {
     @include mq('tablet-2') {
@@ -3544,8 +3496,6 @@ body {
       padding: 30px 60px;
     }
 
-    @include mq('tablet') {}
-
     @include mq('phone') {
       padding: 30px;
     }
@@ -3555,7 +3505,6 @@ body {
     @include mq('phone') {
       display: none;
     }
-
   }
 }
 
@@ -3568,7 +3517,7 @@ body {
     bottom: 0;
     left: 0;
     z-index: -1;
-    background: var(--fancybox-bg, #fff);
+    background: var(--fancybox-bg, $white);
   }
 
   &__container {
@@ -3585,14 +3534,14 @@ body {
 
   &__button.is-next,
   &__button.is-prev {
-    color: #505050;
+    color: $lightgray;
     width: 60px;
     height: 60px;
     box-shadow: none;
   }
 
   &__dot {
-    color: #c2c2c2;
+    color: $gray;
     width: 15px;
     height: 15px;
     margin-right: 15px;
