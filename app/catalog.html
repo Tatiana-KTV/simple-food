@@ -181,100 +181,8 @@
               <h1 class="catalog__title title">Каталог продуктов</h1>
 
               <div class="catalog__top-filter top-filter d-flex">
-                <div class="filter-menu">
 
-                    <button class="filter-menu__close-btn" type="button">
-                      <span class="filter-menu__line"></span>
-                      <span class="sr-only">Закрыть меню</span>
-                    </button>
 
-                  <div class="filter__item">
-                    <h3 class="filter__item-title">Категории</h3>
-
-                    <div class="filter__item">
-                      <form class="filter__item-form form-category" action="#">
-                        <ul class="form-test">
-                          <li class="form-test__item">
-                            <input type="checkbox" id="burger" class="form-test__checkbox">
-                            <label class="form-test__label animation" for="burger">Бургеры</label>
-                          </li>
-                          <li class="form-test__item">
-                            <input type="checkbox" id="pizza" class="form-test__checkbox">
-                            <label class="form-test__label animation" for="pizza">Пицца</label>
-                          </li>
-                          <li class="form-test__item">
-                            <input type="checkbox" id="sandvich" class="form-test__checkbox">
-                            <label class="form-test__label animation" for="sandvich">Сендвичи</label>
-                          </li>
-                          <li class="form-test__item">
-                            <input type="checkbox" id="asia" class="form-test__checkbox">
-                            <label class="form-test__label animation" for="asia">Азиатская кухня</label>
-                          </li>
-                          <li class="form-test__item">
-                            <input type="checkbox" id="set" class="form-test__checkbox">
-                            <label class="form-test__label animation" for="set">Сеты</label>
-                          </li>
-                          <li class="form-test__item">
-                            <input type="checkbox" id="europe" class="form-test__checkbox">
-                            <label class="form-test__label animation" for="europe">Европейская кухня</label>
-                          </li>
-                          <li class="form-test__item">
-                            <input type="checkbox" id="drinks" class="form-test__checkbox">
-                            <label class="form-test__label animation" for="drinks">Напитки</label>
-                          </li>
-                          <li class="form-test__item">
-                            <input type="checkbox" id="alcool" class="form-test__checkbox">
-                            <label class="form-test__label animation" for="alcool">Алкоголь</label>
-                          </li>
-                        </ul>
-
-                      </form>
-                    </div>
-                  </div>
-                  <div class="filter__item">
-                    <h3 class="filter__item-title">Предложения</h3>
-                    <form class="filter__item-form form-offer" action="#">
-                      <ul class="form-offer__list">
-                        <li class="form-offer__item">
-                          <input class="form-offer__checkbox" type="checkbox" id="sale">
-                          <label class="form-offer__label " for="sale">Со скидкой</label>
-                        </li>
-                        <li class="form-offer__item">
-                          <input class="form-offer__checkbox" type="checkbox" id="new" checked>
-                          <label class="form-offer__label" for="new">Новинка</label>
-                        </li>
-                        <li class="form-offer__item">
-                          <input class="form-offer__checkbox" type="checkbox" id="hit-item">
-                          <label class="form-offer__label" for="hit-item">Хит</label>
-                        </li>
-
-                      </ul>
-
-                    </form>
-                  </div>
-                  <div class="filter__item">
-                    <h3 class="filter__item-title">Цена</h3>
-                    <div class="price-slider">
-                      <div class="price-slider__data d-flex">
-                        <div class="price-slider__from d-flex">
-                          <span class="price-slider__txt">от</span>
-                          <input type="text" class="price-slider__input-from" value="0">
-                          <span class="price-slider__currency">₴</span>
-                        </div>
-                        <div class="price-slider__to d-flex">
-                          <span class="price-slider__txt">до</span>
-                          <input type="text" class="price-slider__input-to" value="0">
-                          <span class="price-slider__currency">₴</span>
-                        </div>
-
-                      </div>
-                      <div class="price-slider__slider">
-                        <input type="text" class="price-slider__input" value="">
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
                 <button class="top-filter__btn">
                   <svg width="32" height="36" viewBox="0 0 32 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_669_558)">
@@ -306,72 +214,71 @@
             </div>
 
             <div class="catalog__content d-flex">
-              <div class="catalog__filters filter">
+
+              <div class="filter-menu filter">
+
+                <button class="filter-menu__close-btn" type="button">
+                  <span class="filter-menu__line"></span>
+                  <span class="sr-only">Закрыть меню</span>
+                </button>
+
                 <div class="filter__item">
-                  <h3 class="filter__item-title">Категории</h3>
+                  
                   <div class="filter__item">
-                    <form class="filter__item-form form-category" action="#">
+                    <h2 class="filter__item-title">Категории</h2>
+                    <div class="filter__item-form form-category">
                       <ul class="form-test">
                         <li class="form-test__item">
-                          <input type="checkbox" class="form-test__checkbox">
-                          <label class="form-test__label animation">Бургеры</label>
+                          <a href="#" class="form-test__label animation">Бургеры</a>
                         </li>
                         <li class="form-test__item">
-                          <input type="checkbox" class="form-test__checkbox">
-                          <label class="form-test__label animation">Пицца</label>
+                          <a href="#" class="form-test__label animation">Пицца</a>
                         </li>
                         <li class="form-test__item">
-                          <input type="checkbox" class="form-test__checkbox">
-                          <label class="form-test__label animation">Сендвичи</label>
+                          <a href="#" class="form-test__label animation" >Сендвичи</a>
                         </li>
                         <li class="form-test__item">
-                          <input type="checkbox" class="form-test__checkbox">
-                          <label class="form-test__label animation">Азиатская кухня</label>
+                          <a href="#" class="form-test__label animation">Азиатская кухня</a>
                         </li>
                         <li class="form-test__item">
-                          <input type="checkbox" class="form-test__checkbox">
-                          <label class="form-test__label animation">Сеты</label>
+                          <a href="#" class="form-test__label animation">Сеты</a>
                         </li>
                         <li class="form-test__item">
-                          <input type="checkbox" class="form-test__checkbox">
-                          <label class="form-test__label animation">Европейская кухня</label>
+                          <a href="#" class="form-test__label animation">Европейская кухня</a>
                         </li>
                         <li class="form-test__item">
-                          <input type="checkbox" class="form-test__checkbox">
-                          <label class="form-test__label animation">Напитки</label>
+                          <a href="#" class="form-test__label animation">Напитки</a>
                         </li>
                         <li class="form-test__item">
-                          <input type="checkbox" class="form-test__checkbox">
-                          <label class="form-test__label animation">Алкоголь</label>
+                          <a href="#" class="form-test__label animation">Алкоголь</a>
                         </li>
                       </ul>
-
-                    </form>
+                    </div>
                   </div>
+
                 </div>
                 <div class="filter__item">
-                  <h3 class="filter__item-title">Предложения</h3>
-
+                  <h2 class="filter__item-title">Предложения</h2>
                   <form class="filter__item-form form-offer" action="#">
                     <ul class="form-offer__list">
                       <li class="form-offer__item">
-                        <input class="form-offer__checkbox" type="checkbox" id="sale2">
-                        <label class="form-offer__label " for="sale2">Со скидкой</label>
+                        <input class="form-offer__checkbox" type="checkbox" id="sale">
+                        <label class="form-offer__label " for="sale">Со скидкой</label>
                       </li>
                       <li class="form-offer__item">
-                        <input class="form-offer__checkbox" type="checkbox" id="new2" checked>
-                        <label class="form-offer__label" for="new2">Новинка</label>
+                        <input class="form-offer__checkbox" type="checkbox" id="new" checked>
+                        <label class="form-offer__label" for="new">Новинка</label>
                       </li>
                       <li class="form-offer__item">
-                        <input class="form-offer__checkbox" type="checkbox" id="hit-item2">
-                        <label class="form-offer__label" for="hit-item2">Хит</label>
+                        <input class="form-offer__checkbox" type="checkbox" id="hit-item">
+                        <label class="form-offer__label" for="hit-item">Хит</label>
                       </li>
                     </ul>
+
                   </form>
-                  
                 </div>
                 <div class="filter__item">
-                  <h3 class="filter__item-title">Цена</h3>
+                  <h2 class="filter__item-title">Цена</h2>
                   <div class="price-slider">
                     <div class="price-slider__data d-flex">
                       <div class="price-slider__from d-flex">
@@ -384,13 +291,17 @@
                         <input type="text" class="price-slider__input-to" value="0">
                         <span class="price-slider__currency">₴</span>
                       </div>
+
                     </div>
                     <div class="price-slider__slider">
                       <input type="text" class="price-slider__input" value="">
                     </div>
                   </div>
                 </div>
+
               </div>
+
+              
 
               <div class="catalog__cards">
                 <ul class="catalog-list">
@@ -558,6 +469,7 @@
                 </div>
               </div>
             </div>
+
           </div>
         </section>
 
