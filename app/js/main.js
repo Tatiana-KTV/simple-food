@@ -11,8 +11,8 @@ $(function () {
       infinite: false,
       appendDots: '.slider-navigation__dots',
       appendArrows: '.slider-navigation',
-      nextArrow: '<button type="button" class="slider-navigation__arrow slider-navigation__arrow--prev"><svg class="slider-arrow__arrow-left" fill="#000"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg></button>',
-      prevArrow: '<button type="button" class="slider-navigation__arrow slider-navigation__arrow--next"><svg class="slider-arrow__arrow-right" fill="#000"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg></button>',
+      nextArrow: '<button type="button" class="slider-arrows slider-navigation__arrow slider-navigation__arrow--prev"><svg class="slider-arrow__arrow-left" fill="#000"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg></button>',
+      prevArrow: '<button type="button" class="slider-arrows slider-navigation__arrow slider-navigation__arrow--next"><svg class="slider-arrow__arrow-right" fill="#000"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg></button>',
       responsive: [{
         breakpoint: 560,
         settings: {
@@ -229,8 +229,8 @@ $('.recent__slider').slick({
 
   appendDots: '.recent__slider-dots',
   appendArrows: '.recent__slider-arrow',
-  prevArrow: '<button type="button" class="recent__slider-arrows recent__slider-arrows--prev"><svg class="slider-arrow__arrow-right" fill="#000"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg></button>',
-  nextArrow: '<button type="button" class="recent__slider-arrows recent__slider-arrows--next"><svg class="slider-arrow__arrow-left" fill="#000"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg></button>',
+  prevArrow: '<button type="button" class="slider-arrows recent__slider-arrows recent__slider-arrows--prev"><svg class="slider-arrow__arrow-right" fill="#000"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg></button>',
+  nextArrow: '<button type="button" class="slider-arrows recent__slider-arrows recent__slider-arrows--next"><svg class="slider-arrow__arrow-left" fill="#000"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg></button>',
 });
 
 var $range = $(".price-slider__input"),

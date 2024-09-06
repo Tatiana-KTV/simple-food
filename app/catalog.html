@@ -97,66 +97,71 @@
                   </button>
                 </div>
 
-                <ul class="burger-main">
-                  <li class="burger-main__item">
-                    <a class="burger-main__link active animation" href="index.html" id="home">Главная</a>
+                <ul class="menu ">
+                  <li class="menu__item">
+                    <a class="menu__link  animation" href="index.html">Главная</a>
                   </li>
-                  <li class="burger-main__item">
-                    <a class="burger-main__link animation" href="#" target="_blank" rel="noopener noreferrer">Блюда</a>
+                  <li class="menu__item">
+                    <a class="menu__link active animation" href="catalog.html" target="_blank"
+                      rel="noopener noreferrer">Блюда</a>
                   </li>
-                  <li class="burger-main__item">
-                    <a class="burger-main__link animation" href="#contacts">Контакты</a>
-                  </li>
-                </ul>
-                <ul class="burger-contacts">
-                  <li class="burger-contacts__item d-flex">
-                    <svg class="burger-contacts__icon">
-                      <use xlink:href="images/sprite.svg#icon-location"></use>
-                    </svg>
-                    <span class="burger-contacts__link animation"> ул. Т.Г.Шевченко, 1 </span>
-                  </li>
-                  <li class="burger-contacts__item d-flex">
-                    <svg class="burger-contacts__icon">
-                      <use xlink:href="images/sprite.svg#icon-call"></use>
-                    </svg>
-                    <a class="burger-contacts__link animation" href="tel:+380501112233">380501112233</a>
-                  </li>
-                  <li class="burger-contacts__item d-flex">
-                    <svg class="burger-contacts__icon">
-                      <use xlink:href="images/sprite.svg#icon-message"></use>
-                    </svg>
-                    <a class="burger-contacts__link animation" href="mailto:support@sfood.com">support@sfood.com</a>
+                  <li class="menu__item">
+                    <a class="menu__link animation" href="#contacts">Контакты</a>
                   </li>
                 </ul>
-                <ul class="burger-social d-flex">
-                  <li class="burger-social__item">
-                    <a class="burger-social__link burger-social__link--fb d-flex" href="#" target="_blank"
-                      rel="noopener noreferrer">
-                      <span class="sr-only">ссылка, ведущая на facebook компании</span>
-                      <svg class="burger-social__img social__img--fb">
-                        <use xlink:href="images/sprite.svg#ic-facebook"></use>
+
+                <address class="contacts">
+                  <ul class="contacts__list">
+                    <li class="contacts__detail d-flex">
+                      <svg class="contacts__icon">
+                        <use xlink:href="images/sprite.svg#icon-location"></use>
                       </svg>
-                    </a>
-                  </li>
-                  <li class="burger-social__item">
-                    <a class="burger-social__link burger-social__link--tw d-flex" href="#" target="_blank"
-                      rel="noopener noreferrer">
-                      <span class="sr-only">ссылка, ведущая на twitter компании</span>
-                      <svg class="burger-social__img social__img--tw">
-                        <use xlink:href="images/sprite.svg#ic-twitter"></use>
+                      <span class="contacts__data animation"> ул. Т.Г.Шевченко, 1 </span>
+                    </li>
+                    <li class="contacts__detail d-flex">
+                      <svg class="contacts__icon">
+                        <use xlink:href="images/sprite.svg#icon-call"></use>
                       </svg>
-                    </a>
-                  </li>
-                  <li class="burger-social__item">
-                    <a class="burger-social__link burger-social__link--ig d-flex" href="#" target="_blank"
-                      rel="noopener noreferrer">
-                      <span class="sr-only">ссылка, ведущая на instagram компании</span>
-                      <svg class="burger-social__img social__img--ig">
-                        <use xlink:href="images/sprite.svg#ic-instagram"></use>
+                      <a class="contacts__data animation" href="tel:+380501112233">380501112233</a>
+                    </li>
+                    <li class="contacts__detail d-flex">
+                      <svg class="contacts__icon">
+                        <use xlink:href="images/sprite.svg#icon-message"></use>
                       </svg>
-                    </a>
-                  </li>
-                </ul>
+                      <a class="contacts__data animation" href="mailto:support@sfood.com">support@sfood.com</a>
+                    </li>
+                  </ul>
+                  <ul class="contacts__list social d-flex">
+                    <li class="social__item">
+                      <a class="social__link social__link--fb d-flex" href="#" target="_blank"
+                        rel="noopener noreferrer">
+                        <span class="sr-only">ссылка, ведущая на facebook компании</span>
+                        <svg class="social__img social__img--fb">
+                          <use xlink:href="images/sprite.svg#ic-facebook"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="social__item">
+                      <a class="social__link social__link--tw d-flex" href="#" target="_blank"
+                        rel="noopener noreferrer">
+                        <span class="sr-only">ссылка, ведущая на twitter компании</span>
+                        <svg class="social__img social__img--tw">
+                          <use xlink:href="images/sprite.svg#ic-twitter"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="social__item">
+                      <a class="social__link social__link--ig d-flex" href="#" target="_blank"
+                        rel="noopener noreferrer">
+                        <span class="sr-only">ссылка, ведущая на instagram компании</span>
+                        <svg class="social__img social__img--ig">
+                          <use xlink:href="images/sprite.svg#ic-instagram"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </address>
+
               </div>
             </nav>
           </div>
@@ -223,7 +228,7 @@
                 </button>
 
                 <div class="filter__item">
-                  
+
                   <div class="filter__item">
                     <h2 class="filter__item-title">Категории</h2>
                     <div class="filter__item-form form-category">
@@ -235,7 +240,7 @@
                           <a href="#" class="form-test__label animation">Пицца</a>
                         </li>
                         <li class="form-test__item">
-                          <a href="#" class="form-test__label animation" >Сендвичи</a>
+                          <a href="#" class="form-test__label animation">Сендвичи</a>
                         </li>
                         <li class="form-test__item">
                           <a href="#" class="form-test__label animation">Азиатская кухня</a>
@@ -301,7 +306,7 @@
 
               </div>
 
-              
+
 
               <div class="catalog__cards">
                 <ul class="catalog-list">
@@ -457,9 +462,9 @@
                     </svg>
                   </span>
                   <span class="pagination__link active">1</span>
-                  <a class="pagination__link" href="#">2</a>
+                  <a class="pagination__link hide" href="#">2</a>
                   <span class="pagination__link pagination__disabled">...</span>
-                  <a class="pagination__link" href="#">9</a>
+                  <a class="pagination__link hide" href="#">9</a>
                   <a class="pagination__link" href="#">10</a>
                   <a class="pagination__link pagination__arrow pagination__arrow--next" href="#">
                     <svg class="pagination__arrow-icon">
