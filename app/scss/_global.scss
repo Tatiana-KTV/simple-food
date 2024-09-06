@@ -2,7 +2,7 @@ body {
   background-color: $silver-100;
   @extend %rubik-400;
   color: $dark;
-  height: 100vh;
+  min-height: 100vh;
   font-size: 16px;
 }
 
