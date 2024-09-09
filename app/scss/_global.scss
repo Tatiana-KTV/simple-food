@@ -6,6 +6,27 @@ body {
   font-size: 16px;
 }
 
+body {
+  height: 100%;
+
+  &.lock,
+  &.new-lock {
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+
+    &::after {
+      content: "";
+      display: block;
+      position: fixed;
+      height: 100vh;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 2;
+    }
+  }
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -117,5 +138,41 @@ body {
   &:active {
     background-color: rgba($orange-700, 0.1);
     box-shadow: none;
+  }
+}
+
+.section {
+  padding: 60px 0;
+
+  @include mq('tablet-2') {
+    padding: 50px 0;
+  }
+
+  @include mq('tablet') {
+    padding: 40px 0;
+  }
+
+  @include mq('phone') {
+    padding: 20px 0;
+  }
+}
+
+.btn-more {
+  font-size: 20px;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: $dark-blue900;
+  padding: 8px 0;
+  border-radius: 5px;
+  transition: color 0.3s, text-decoration 0.3s, box-shadow 0.3s, border 0.3s;
+
+  @include mq('tablet-2') {
+    font-size: 16px;
+  }
+
+  @include mq('tablet') {
+    font-size: 14px;
+    padding: 6px 0;
   }
 }

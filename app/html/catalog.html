@@ -1,0 +1,29 @@
+@@include('components/_head.html', {
+'pageTitle': 'SimpleFood - каталог товаров'
+})
+
+  <div class="wrapper">
+    <div class="wrapper-content">
+
+
+
+@@include('components/_header.html', {
+"page": "catalog"
+})
+
+
+      <main class="main">
+@@include('page-catalog/_breadcrumbs.html')
+@@include('page-catalog/_catalog.html')
+@@include('components/_application.html')
+@@include('page-catalog/_promo.html')
+
+
+        
+      </main>
+    </div>
+
+@@include('components/_footer.html')
+
+  </div>
+@@include('components/_scripts.html')
