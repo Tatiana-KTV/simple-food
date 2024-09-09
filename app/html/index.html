@@ -1,0 +1,30 @@
+@@include('components/_head.html', {
+  'pageTitle': 'SimpleFood - онлайн сервис доставки еды'
+})
+
+
+  <div class="wrapper">
+    <div class="wrapper-content">
+
+@@include('components/_header.html', {
+  "page": "index"
+}) 
+
+
+      <main class="main">
+@@include('page-index/_hero-section.html')
+@@include('page-index/_popular-category-section.html')
+@@include('page-index/_features.html')
+@@include('page-index/_restorant.html')
+@@include('page-index/_testimonials.html')
+@@include('components/_application.html')
+
+      </main>
+      
+
+    </div>
+@@include('components/_footer.html')
+
+  </div>
+
+@@include('components/_scripts.html')

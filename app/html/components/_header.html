@@ -1,0 +1,151 @@
+      <header class="header">
+
+        <div class="header__top">
+          <div class="container">
+            <nav class="header__content d-flex">
+              <a class="logo header__logo hide" href="#body">
+                <img class="header__logo-img" src="images/logo.png" width="200" height="39" alt="логотип компании">
+              </a>
+              <ul class="menu hide d-flex">
+                <li class="menu__item">
+                   <a class="menu__link animation @@if (context.page === 'index') {active}"
+                     href="index.html">Главная</a>
+                  
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link animation @@if (context.page === 'catalog') {active}" href="catalog.html"
+                    target="_blank"
+                    rel="noopener noreferrer">Блюда</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link animation" href="#contacts">Контакты</a>
+                </li>
+              </ul>
+              <ul class="user-nav hide d-flex">
+                <li class="user-nav__item">
+                  <button class="user-nav__btn d-flex" type="button">
+                    <svg class="user-nav__icon">
+                      <use xlink:href="images/sprite.svg#icon-search"></use>
+                    </svg>
+                    <span class="sr-only">поиск</span>
+                  </button>
+                </li>
+                <li class="user-nav__item">
+                  <button class="user-nav__btn d-flex" type="button">
+                    <svg class="user-nav__icon">
+                      <use xlink:href="images/sprite.svg#icon-cart"></use>
+                    </svg>
+                    <span class="sr-only">корзина</span>
+                    <span class="user-nav__num">4</span>
+                  </button>
+                </li>
+              </ul>
+            </nav>
+            <nav class="mobile-menu d-flex">
+              <a class="logo header__logo" href="#body">
+                <img class="header__logo-img" src="images/logo.png" width="115" height="23" alt="логотип компании">
+              </a>
+              <ul class="user-nav d-flex">
+                <li class="user-nav__item">
+                  <button class="user-nav__btn d-flex" type="button">
+                    <svg class="user-nav__icon">
+                      <use xlink:href="images/sprite.svg#icon-search"></use>
+                    </svg>
+                    <span class="sr-only">поиск</span>
+                  </button>
+                </li>
+                <li class="user-nav__item">
+                  <button class="user-nav__btn d-flex" type="button">
+                    <svg class="user-nav__icon">
+                      <use xlink:href="images/sprite.svg#icon-cart"></use>
+                    </svg>
+                    <span class="sr-only">корзина</span>
+                    <span class="user-nav__num">4</span>
+                  </button>
+                </li>
+              </ul>
+              <button class="burger" type="button">
+                <span class="burger__line"></span>
+                <span class="sr-only">Открыть меню</span>
+              </button>
+              <div class="burger-menu d-flex">
+                <div class="burger-top d-flex">
+                  <a class="logo header__logo" href="#body">
+                    <img class="header__logo-img" src="images/logo.png" width="200" height="39" alt="логотип компании">
+                  </a>
+                  <button class="burger-new" type="button">
+                    <span class="burger-new__line"></span>
+                    <span class="sr-only">Открыть меню</span>
+                  </button>
+                </div>
+
+                <ul class="menu ">
+                  <li class="menu__item">
+                    <a class="menu__link  animation" href="index.html">Главная</a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link animation" href="catalog.html" target="_blank"
+                      rel="noopener noreferrer">Блюда</a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link animation" href="#contacts">Контакты</a>
+                  </li>
+                </ul>
+
+                <address class="contacts">
+                  <ul class="contacts__list">
+                    <li class="contacts__detail d-flex">
+                      <svg class="contacts__icon">
+                        <use xlink:href="images/sprite.svg#icon-location"></use>
+                      </svg>
+                      <span class="contacts__data animation"> ул. Т.Г.Шевченко, 1 </span>
+                    </li>
+                    <li class="contacts__detail d-flex">
+                      <svg class="contacts__icon">
+                        <use xlink:href="images/sprite.svg#icon-call"></use>
+                      </svg>
+                      <a class="contacts__data animation" href="tel:+380501112233">380501112233</a>
+                    </li>
+                    <li class="contacts__detail d-flex">
+                      <svg class="contacts__icon">
+                        <use xlink:href="images/sprite.svg#icon-message"></use>
+                      </svg>
+                      <a class="contacts__data animation" href="mailto:support@sfood.com">support@sfood.com</a>
+                    </li>
+                  </ul>
+                  <ul class="contacts__list social d-flex">
+                    <li class="social__item">
+                      <a class="social__link social__link--fb d-flex" href="#" target="_blank"
+                        rel="noopener noreferrer">
+                        <span class="sr-only">ссылка, ведущая на facebook компании</span>
+                        <svg class="social__img social__img--fb">
+                          <use xlink:href="images/sprite.svg#ic-facebook"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="social__item">
+                      <a class="social__link social__link--tw d-flex" href="#" target="_blank"
+                        rel="noopener noreferrer">
+                        <span class="sr-only">ссылка, ведущая на twitter компании</span>
+                        <svg class="social__img social__img--tw">
+                          <use xlink:href="images/sprite.svg#ic-twitter"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="social__item">
+                      <a class="social__link social__link--ig d-flex" href="#" target="_blank"
+                        rel="noopener noreferrer">
+                        <span class="sr-only">ссылка, ведущая на instagram компании</span>
+                        <svg class="social__img social__img--ig">
+                          <use xlink:href="images/sprite.svg#ic-instagram"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </address>
+
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
