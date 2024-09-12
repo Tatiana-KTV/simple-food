@@ -2,72 +2,13 @@
 
         <div class="header__top">
           <div class="container">
-            <nav class="header__content d-flex">
-              <a class="logo header__logo hide" href="#body">
+
+            <nav class="mobile-menu d-flex">
+
+              <a class="logo header__logo" href="#body">
                 <img class="header__logo-img" src="images/logo.png" width="200" height="39" alt="логотип компании">
               </a>
-              <ul class="menu hide d-flex">
-                <li class="menu__item">
-                   <a class="menu__link animation @@if (context.page === 'index') {active}"
-                     href="index.html">Главная</a>
-                  
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link animation @@if (context.page === 'catalog') {active}" href="catalog.html"
-                    target="_blank"
-                    rel="noopener noreferrer">Блюда</a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link animation" href="#contacts">Контакты</a>
-                </li>
-              </ul>
-              <ul class="user-nav hide d-flex">
-                <li class="user-nav__item">
-                  <button class="user-nav__btn d-flex" type="button">
-                    <svg class="user-nav__icon">
-                      <use xlink:href="images/sprite.svg#icon-search"></use>
-                    </svg>
-                    <span class="sr-only">поиск</span>
-                  </button>
-                </li>
-                <li class="user-nav__item">
-                  <button class="user-nav__btn d-flex" type="button">
-                    <svg class="user-nav__icon">
-                      <use xlink:href="images/sprite.svg#icon-cart"></use>
-                    </svg>
-                    <span class="sr-only">корзина</span>
-                    <span class="user-nav__num">4</span>
-                  </button>
-                </li>
-              </ul>
-            </nav>
-            <nav class="mobile-menu d-flex">
-              <a class="logo header__logo" href="#body">
-                <img class="header__logo-img" src="images/logo.png" width="115" height="23" alt="логотип компании">
-              </a>
-              <ul class="user-nav d-flex">
-                <li class="user-nav__item">
-                  <button class="user-nav__btn d-flex" type="button">
-                    <svg class="user-nav__icon">
-                      <use xlink:href="images/sprite.svg#icon-search"></use>
-                    </svg>
-                    <span class="sr-only">поиск</span>
-                  </button>
-                </li>
-                <li class="user-nav__item">
-                  <button class="user-nav__btn d-flex" type="button">
-                    <svg class="user-nav__icon">
-                      <use xlink:href="images/sprite.svg#icon-cart"></use>
-                    </svg>
-                    <span class="sr-only">корзина</span>
-                    <span class="user-nav__num">4</span>
-                  </button>
-                </li>
-              </ul>
-              <button class="burger" type="button">
-                <span class="burger__line"></span>
-                <span class="sr-only">Открыть меню</span>
-              </button>
+
               <div class="burger-menu d-flex">
                 <div class="burger-top d-flex">
                   <a class="logo header__logo" href="#body">
@@ -81,10 +22,12 @@
 
                 <ul class="menu ">
                   <li class="menu__item">
-                    <a class="menu__link  animation" href="index.html">Главная</a>
+                    <a class="menu__link  animation @@if (context.page === 'index') {active}"
+                      href="index.html">Главная</a>
                   </li>
                   <li class="menu__item">
-                    <a class="menu__link animation" href="catalog.html" target="_blank"
+                    <a class="menu__link animation @@if (context.page === 'catalog') {active}" href="catalog.html"
+                      target="_blank"
                       rel="noopener noreferrer">Блюда</a>
                   </li>
                   <li class="menu__item">
@@ -145,6 +88,31 @@
                 </address>
 
               </div>
+
+              <ul class="user-nav d-flex">
+                <li class="user-nav__item">
+                  <button class="user-nav__btn d-flex" type="button">
+                    <svg class="user-nav__icon">
+                      <use xlink:href="images/sprite.svg#icon-search"></use>
+                    </svg>
+                    <span class="sr-only">поиск</span>
+                  </button>
+                </li>
+                <li class="user-nav__item">
+                  <button class="user-nav__btn d-flex" type="button">
+                    <svg class="user-nav__icon">
+                      <use xlink:href="images/sprite.svg#icon-cart"></use>
+                    </svg>
+                    <span class="sr-only">корзина</span>
+                    <span class="user-nav__num">4</span>
+                  </button>
+                </li>
+              </ul>
+
+              <button class="burger" type="button">
+                <span class="burger__line"></span>
+                <span class="sr-only">Открыть меню</span>
+              </button>
             </nav>
           </div>
         </div>
