@@ -90,7 +90,6 @@
     @include mq('tablet') {
       margin-bottom: 40px;
       flex-direction: column;
-      // align-items: center;
     }
 
     @include mq('phone') {
@@ -114,8 +113,6 @@
     @include mq('tablet') {
       text-align: left;
     }
-
-    @include mq('phone') {}
   }
 
   &__star {
@@ -517,9 +514,6 @@
 
   &__rating-group::before {
     content: '★★★★★';
-    // background-image: url('../images/icons/icon-star.svg');
-    // @include recolor(#C1C1C1);
-    // background-repeat: repeat-x;
     height: 27px;
     display: block;
     width: 104px;
@@ -646,19 +640,14 @@
       }
     }
 
-    // @include mq('tablet') {
-    //   width: 345px;
-    // }
     @include mq('tablet') {
       margin-top: 0;
-      // width: 345px;
       width: 100%;
     }
 
   }
 
   &__client-name {
-    // margin-top: 15px;
     border: 1px solid $gray;
     border-radius: 5px;
     width: 260px;
@@ -687,10 +676,8 @@
 
     @include mq('tablet') {
       margin-top: 0;
-      // width: 345px;
       width: 100%;
     }
-
   }
 
   &__client-data {
@@ -714,7 +701,6 @@
     width: 260px;
     height: 57px;
     padding: 18px;
-    // margin-top: 15px;
     background-color: $white;
 
     &:focus {
@@ -740,7 +726,6 @@
       margin-top: 0;
       width: 100%;
     }
-
   }
 
   &__input-save {
@@ -935,7 +920,6 @@
 .recent {
   display: flex;
   flex-direction: column;
-  // padding: 60px 0;
 
   &__top {
     position: relative;
@@ -978,7 +962,6 @@
   &__slider-arrow {
     position: absolute;
     top: 0;
-    // transform: translate(-50%);
     right: 0;
   }
 
@@ -996,7 +979,6 @@
       width: 40px;
       height: 40px;
     }
-
   }
 }
 
@@ -1094,7 +1076,6 @@
       z-index: -5;
     }
   }
-
 }
 
 .carousel {
