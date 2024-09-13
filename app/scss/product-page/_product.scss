@@ -16,6 +16,7 @@
   }
 }
 
+
 .catalog {
 
   &__title {
@@ -113,6 +114,10 @@
     @include mq('tablet') {
       text-align: left;
     }
+    @include mq('phone') {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
   }
 
   &__star {
@@ -144,6 +149,9 @@
 
     @include mq('tablet-2') {
       flex-direction: column;
+    }
+    @include mq('phone') {
+      margin-bottom: 30px;
     }
   }
 
@@ -208,6 +216,9 @@
     @include mq('desktop') {
       margin-bottom: 30px;
       font-size: 22px;
+    }
+    @include mq('phone') {
+      font-size: 18px;
     }
 
     &::after {
@@ -455,7 +466,7 @@
     font-size: 20px;
     line-height: 1.5;
     opacity: 0.9;
-    margin-bottom: 20px;
+    
 
     @include mq('desktop') {
       margin-bottom: 15px;
@@ -467,6 +478,10 @@
 
     @include mq('tablet') {
       font-size: 16px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
     }
   }
 
@@ -490,6 +505,9 @@
 
     @include mq('tablet') {
       padding-bottom: 35px;
+    }
+    @include mq('phone') {
+      padding-bottom: 53px;
     }
   }
 
@@ -985,6 +1003,17 @@
 .recent__slider .slick-slide {
   margin-right: 30px;
 }
+.recent__slider.slick-slider {
+  margin-bottom: 0;
+  @include mq('phone') {
+    margin-bottom: 20px;
+  }
+}
+
+// recent__slider.slick-slider {
+//   padding: 0;
+//   /* margin-bottom: 30px; */
+// }
 
 .carousel {
   max-width: 610px;
@@ -1009,6 +1038,11 @@
     width: 100%;
     margin-bottom: 15px;
     margin-right: 0;
+  }
+
+  @include mq('phone') {
+    height: 355px;
+    margin-bottom: 12px;
   }
 
   &__img {
