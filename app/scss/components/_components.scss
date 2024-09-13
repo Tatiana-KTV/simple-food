@@ -56,9 +56,11 @@
   transition: box-shadow 0.3s;
 
   @include mq('tablet') {
-    width: 345px;
+    max-width: 345px;
+    width: 100%;
     margin: 0 auto;
   }
+
 
   @media (any-hover: hover) {
     &:hover {
@@ -230,7 +232,6 @@
 
   @include mq('phone') {
     padding: 20px 0;
-    // margin: 0 15px;
   }
 
   &__title {
@@ -318,7 +319,6 @@
   }
 
   @include mq('phone') {
-    // padding-top: 20px;
     padding-top: 5px;
   }
 }
@@ -408,7 +408,6 @@
 }
 
 .subscribe-form {
-  // margin-top: 30px;
   flex-direction: column;
   max-width: 200px;
   width: 100%;
@@ -525,6 +524,7 @@
     line-height: 2;
     border-radius: 5px;
   }
+
   &__list {
     margin-bottom: 15px;
   }
@@ -604,12 +604,6 @@
   transition: box-shadow 0.3s, opacity 0.3s;
   width: 200px;
 
-  // @include mq('phone') {
-  //   width: 115px;
-  //   height: 23px;
-  //   margin-left: 0;
-  // }
-
   &__img {
     width: 200px;
   }
@@ -635,27 +629,11 @@
 
   @include mq('tablet-2') {
     padding-top: 90px;
-
-    // .hide {
-    //   position: absolute;
-    //   width: 1px;
-    //   height: 1px;
-    //   margin: -1px;
-    //   border: 0;
-    //   padding: 0;
-    //   white-space: nowrap;
-    //   clip-path: inset(100%);
-    //   clip: rect(0 0 0 0);
-    //   overflow: hidden;
-    // }
   }
-    //  @include mq('tablet-2') {
-    //    padding: 25px 0;
-    //  }
 
-     @include mq('phone') {
-       padding-top: 72px;
-     }
+  @include mq('phone') {
+    padding-top: 72px;
+  }
 
   &__top {
     position: fixed;
@@ -743,7 +721,6 @@
         color: $white;
         background-color: $orange-900;
       }
-
     }
 
     &:active {
@@ -953,17 +930,16 @@
 }
 
 .burger-menu {
-  // display: flex;
-
   &.burger-menu--active {
     transform: translateY(0);
     position: fixed;
-      .logo__logo-img {
-        @include mq('phone') {
-          width: 115px;
-          height: 23px;
-        }
+
+    .logo__logo-img {
+      @include mq('phone') {
+        width: 115px;
+        height: 23px;
       }
+    }
   }
 
   @include mq('tablet-2') {
@@ -985,14 +961,12 @@
 
   .menu {
     display: flex;
-
-
     @include mq('tablet-2') {
       flex-direction: column;
       padding: 25px 0 25px 15px;
       border-top: 1px solid #EEEFF3;
       border-bottom: 1px solid #EEEFF3;
-          margin-right: 0;
+      margin-right: 0;
 
       &__item:not(:last-child) {
         margin-bottom: 20px;
@@ -1014,6 +988,7 @@
       align-items: center;
       padding: 25px 26px 25px 15px;
     }
+
     .header__logo-img {
       width: 200px;
       height: 39px;
@@ -1028,10 +1003,12 @@
       padding: 15px 0 25px 21px;
     }
 
+    @include mq ('phone') {
+      display: block;
+      padding: 15px 0 25px 15px;
+    }
   }
 }
-
-
 
 .wrappwer-wide {
   background-color: rgba($orange-700, 0.1);

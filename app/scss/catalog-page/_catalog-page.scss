@@ -554,11 +554,9 @@
             border-radius: 50%;
             margin-bottom: 7px;
             cursor: pointer;
-            // margin-right: 15px;
           }
 
           &.slick-active {
-
             button,
             .slick-active__arrow {
               background-color: $orange-700;
@@ -671,6 +669,5 @@
       border: 1px solid $orange-900;
     }
   }
-
 }
 
